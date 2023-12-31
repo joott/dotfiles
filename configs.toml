@@ -3,8 +3,8 @@ file = "nvim"
 parent = "~/.config"
 
 [kanata]
-file = "/home/josh/.config"
-parent = "keybs"
+file = "keybs"
+parent = "~/.config"
 
 [tex]
 file = "texmf"
@@ -27,8 +27,8 @@ file = "dunst"
 parent = "~/.config"
 
 [xplr]
-file = "/home/josh/.config"
-parent = "xplr"
+file = "xplr"
+parent = "~/.config"
 
 [fish]
 file = "fish"
