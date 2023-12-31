@@ -1,0 +1,120 @@
+#| --------------------------------------------------------------------------
+
+(deflayer name
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    _    _    _    _          _
+  _    _    _    _    _    _    _    _    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+                                                               _    _    _
+)
+
+  -------------------------------------------------------------------------- |#
+
+(defcfg
+  ;; For Linux
+  input  (device-file "/dev/input/event3")
+  output (uinput-sink "KMonad laptop"
+    "/sbin/sleep 1 && /sbin/setxkbmap -option compose:ralt")
+  cmp-seq ralt    ;; Set the compose key to `RightAlt'
+  cmp-seq-delay 5 ;; 5ms delay between each compose-key sequence press
+
+  fallthrough true
+
+  allow-cmd true
+)
+
+(defalias
+  ;; layer switches
+  nav (layer-toggle navigation)
+  num (sticky-key 500 (layer-toggle numbers))
+  qwe (layer-switch qwerty)
+  cdh (layer-switch colemakdh)
+  msf (tap-hold-next-release 200
+            (around-next-timeout 500 (around (layer-toggle shifted) lsft) XX)
+            lsft)
+
+  ;; home row mods
+  hrt (tap-hold-next-release 200 t lmet)
+  hrn (tap-hold-next-release 200 n lmet)
+  hrs (tap-hold-next-release 200 s lctl)
+  hre (tap-hold-next-release 200 e lctl)
+  hrr (tap-hold-next-release 200 r lalt)
+  hri (tap-hold-next-release 200 i lalt)
+  hra (tap-hold-next-release 200 a @nav)
+  mes (tap-hold-next-release 200 esc lsft)
+
+  hrT (tap-hold-next-release 200 T lmet)
+  hrN (tap-hold-next-release 200 N lmet)
+  hrS (tap-hold-next-release 200 S lctl)
+  hrE (tap-hold-next-release 200 E lctl)
+  hrR (tap-hold-next-release 200 R lalt)
+  hrI (tap-hold-next-release 200 I lalt)
+
+  meq (tap-hold-next-release 200 = lmet)
+
+  pop (tap-hold-next-release 200 \( lctl)
+  pcl (tap-hold-next-release 200 \) lsft)
+  cop (tap-hold-next-release 200 {  lalt)
+)
+
+(defsrc
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '          ret
+  lsft z    x    c    v    b    n    m    ,    .    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  pgup up   pgdn
+                                                               left down rght
+)
+
+(deflayer colemakdh
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  @qwe del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    [     ]    \
+  esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri o    '          ret
+  @msf x    c    d    v    z    k    h    ,    .    /               @msf
+  wkup lctl lmet lalt           spc            @num sys  rctl  pgdn up   pgup
+                                                               left down rght
+)
+
+(deflayer shifted
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    A    @hrR @hrS @hrT _    _    @hrN @hrE @hrI _    _          _
+  _    _    _    _    _    _    _    _    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+                                                               _    _    _
+)
+
+(deflayer navigation
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    pgdn pgup _    _    _     _
+  _    _    @cop @pop @pcl _    _    left down up   rght bspc       _
+  _    _    [    ]    }    _    _    home end  _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+                                                               _    _    _
+)
+
+(deflayer numbers
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    4    5    6    |    _    _    <    >    *    _    _     _
+  spc  tab  1    2    3    ^    _    @meq ,    .    /    _          _
+  _    7    8    9    ~    _    _    \_   -    +    _               _
+  _    _    _    _              0              _    _    _     _    _    _
+                                                               _    _    _
+)
+
+(deflayer qwerty
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  @cdh del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '          ret
+  lsft z    x    c    v    b    n    m    ,    .    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  pgup up   pgdn
+  left down rght
+)
