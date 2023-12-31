@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ottmath}[2023/09/03]
+
+\newcommand{\diff}{\, d}
+\newcommand{\pdiff}{\, \partial}
+\newcommand{\od}[3][]{\frac{d{}^{#1}#2}{d{#3}^{#1}}}
+\newcommand{\pd}[3][]{\frac{\partial{}^{#1}#2}{\partial{#3}^{#1}}}
+
+\newcommand\pvec[1]{\vec{#1}\,'}
+\newcommand\Del{\vec{\nabla}}
+
+\newcommand\eval[1]{\Big| _{#1}}
+
+\renewcommand\mid{\;
+\ifnum\currentgrouptype=16
+    \middle|
+\else
+    |
+\fi\;}
