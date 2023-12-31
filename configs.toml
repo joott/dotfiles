@@ -1,0 +1,51 @@
+[nvim]
+file = "nvim"
+parent = "~/.config"
+
+[kanata]
+file = "/home/josh/.config"
+parent = "keybs"
+
+[tex]
+file = "texmf"
+parent = "~/"
+
+[tofi]
+file = "tofi"
+parent = "~/.config"
+
+[vim]
+file = ".vimrc"
+parent = "~/"
+
+[zathura]
+file = "zathura"
+parent = "~/.config"
+
+[dunst]
+file = "dunst"
+parent = "~/.config"
+
+[xplr]
+file = "/home/josh/.config"
+parent = "xplr"
+
+[fish]
+file = "fish"
+parent = "~/.config"
+
+[swaylock]
+file = "swaylock"
+parent = "~/.config"
+
+[sway]
+file = "sway"
+parent = "~/.config"
+
+[waybar]
+file = "waybar"
+parent = "~/.config"
+
+[wezterm]
+file = ".wezterm.lua"
+parent = "~/"
