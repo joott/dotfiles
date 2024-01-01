@@ -19,5 +19,7 @@ if status is-interactive
     alias nv=nvim
 
     fish_add_path -p ~/.cargo/bin ~/.local/bin
+    fish_vi_key_bindings
+    enable_transience
     pfetch
 end
