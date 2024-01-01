@@ -70,11 +70,11 @@ format = '[$all_status$ahead_behind ]($style)'
 [character]
 disabled = false
 success_symbol = '[─󰁔](fg:id_color)'
-error_symbol = '[┤](fg:id_color)[󰁔](fg:red)'
-vimcmd_symbol = '[┤](fg:id_color)[](fg:green)'
-vimcmd_replace_one_symbol = '[┤](fg:id_color)[](fg:mauve)'
-vimcmd_replace_symbol = '[┤](fg:id_color)[](fg:mauve)'
-vimcmd_visual_symbol = '[┤](fg:id_color)[](fg:yellow)'
+error_symbol = '[⟮](fg:id_color)[󰁔](fg:red)'
+vimcmd_symbol = '[⟮](fg:id_color)[](fg:green)'
+vimcmd_replace_one_symbol = '[⟮](fg:id_color)[](fg:mauve)'
+vimcmd_replace_symbol = '[⟮](fg:id_color)[](fg:mauve)'
+vimcmd_visual_symbol = '[⟮](fg:id_color)[](fg:yellow)'
 
 [sudo]
 disabled = false
