@@ -1,0 +1,124 @@
+format = """
+[╭](id_color)\
+[](id_color)\
+$os\
+$username\
+[](fg:id_color bg:dir_color)\
+$directory\
+[](fg:dir_color bg:git_color)\
+$git_branch\
+$git_status\
+[](fg:git_color bg:lang_color)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$julia\
+[](fg:lang_color)\
+$line_break\
+[╰](id_color)$character
+"""
+
+palette = "catppuccin"
+
+[palettes.catppuccin]
+id_color = "#f0c6c6" # flamingo
+dir_color = "#ed8796" # red
+git_color = "#c6a0f6" # mauve
+lang_color = "#b7bdf8" # lavender
+yellow = "#eed49f"
+mauve = "#c6a0f6"
+
+[os]
+disabled = false
+style = "bg:id_color fg:black bold"
+
+[os.symbols]
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Arch = "󰣇"
+
+[username]
+show_always = true
+format = '[ $user ](bg:id_color fg:black bold)'
+disabled = false
+
+[directory]
+style = "bg:dir_color"
+format = "[ $path ]($style fg:black bold)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:git_color fg:black bold"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:git_color fg:black bold"
+format = '[$all_status$ahead_behind ]($style)'
+
+# [character]
+# disabled = false
+# success_symbol = '[](bold fg:green)'
+# error_symbol = '[](bold fg:red)'
+# vimcmd_symbol = '[](bold fg:green)'
+# vimcmd_replace_one_symbol = '[](bold fg:mauve)'
+# vimcmd_replace_symbol = '[](bold fg:mauve)'
+# vimcmd_visual_symbol = '[](bold fg:yellow)'
+
+[nodejs]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'
+
+[julia]
+symbol = ""
+style = "bg:lang_color fg:black bold"
+format = '[ $symbol( $version) ]($style)'

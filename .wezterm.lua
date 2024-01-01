@@ -18,23 +18,23 @@ end
 local scheme = wezterm.color.get_builtin_schemes()['Catppuccin Macchiato']
 scheme.ansi = {
     "#414559", 
-    "#FB6E71", 
-    "#A1EB70", 
-    "#FBCF7A", 
-    "#81A6F9", 
-    "#FEAEE9", 
-    "#67e5d4", 
+    "#ed4760", 
+    "#87d86c", 
+    "#edc576", 
+    "#6192f4", 
+    "#f492da", 
+    "#60d6c4", 
     "#CDD2E4", 
 }
 
 scheme.brights = {
     "#51576d",
-    "#FB6E71", 
-    "#A1EB70", 
-    "#FBCF7A", 
-    "#81A6F9", 
-    "#FEAEE9", 
-    "#67e5d4", 
+    "#ed4760", 
+    "#87d86c", 
+    "#edc576", 
+    "#6192f4", 
+    "#f492da", 
+    "#60d6c4", 
 	"#DADFF1",
 }
 
