@@ -1,22 +1,6 @@
-[tofi]
-file = "tofi"
+[nvim]
+file = "nvim"
 parent = "~/.config"
-
-[zathura]
-file = "zathura"
-parent = "~/.config"
-
-[waybar]
-file = "waybar"
-parent = "~/.config"
-
-[xplr]
-file = "xplr"
-parent = "~/.config"
-
-[wezterm]
-file = ".wezterm.lua"
-parent = "~/"
 
 [kanata]
 file = "keybs"
@@ -26,30 +10,50 @@ parent = "~/.config"
 file = "sway"
 parent = "~/.config"
 
-[tex]
-file = "texmf"
+[wezterm]
+file = ".wezterm.lua"
 parent = "~/"
 
-[swaylock]
-file = "swaylock"
-parent = "~/.config"
+[fish]
+file = "config.fish"
+parent = "~/.config/fish"
 
-[starship]
-file = "starship"
-parent = "/home/josh/.config"
+[waybar]
+file = "waybar"
+parent = "~/.config"
 
 [vim]
 file = ".vimrc"
 parent = "~/"
 
-[nvim]
-file = "nvim"
-parent = "~/.config"
-
-[fish]
-file = "config.fish"
-parent = "/home/josh/.config/fish"
-
 [dunst]
 file = "dunst"
+parent = "~/.config"
+
+[zathura]
+file = "zathura"
+parent = "~/.config"
+
+[tex]
+file = "texmf"
+parent = "~/"
+
+[starship]
+file = "starship"
+parent = "~/.config"
+
+[tofi]
+file = "tofi"
+parent = "~/.config"
+
+[tmux]
+file = ".tmux.conf"
+parent = "/home/josh/"
+
+[xplr]
+file = "xplr"
+parent = "~/.config"
+
+[swaylock]
+file = "swaylock"
 parent = "~/.config"
