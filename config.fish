@@ -2,10 +2,17 @@ fish_add_path -p /usr/local/sbin /usr/local/bin /usr/bin
 
 set -e TERMCAP
 set -e MANPATH
+set -U fish_greeting
+set -Ux STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 pyenv init - | source
 zoxide init fish | source
 starship init fish | source
+
+function starship_transient_prompt_func
+    set --local -x STARSHIP_CONFIG ~/.config/starship/transient.toml
+    starship module character
+end
 
 function xcd
     set --local result (command xplr $argv)
@@ -13,7 +20,7 @@ function xcd
 end
 
 if status is-interactive
-    alias ls='eza'
+    alias ls='eza -w 80 --icons'
     alias cd='z'
     alias grep='grep --color=auto'
     alias nv=nvim
@@ -21,5 +28,4 @@ if status is-interactive
     fish_add_path -p ~/.cargo/bin ~/.local/bin
     fish_vi_key_bindings
     enable_transience
-    pfetch
 end

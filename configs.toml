@@ -1,55 +1,55 @@
-[starship]
-file = "starship.toml"
-parent = "/home/josh/.config"
-
 [dunst]
 file = "dunst"
-parent = "~/.config"
-
-[swaylock]
-file = "swaylock"
-parent = "~/.config"
-
-[vim]
-file = ".vimrc"
-parent = "~/"
-
-[tofi]
-file = "tofi"
-parent = "~/.config"
-
-[tex]
-file = "texmf"
-parent = "~/"
-
-[fish]
-file = "fish"
 parent = "~/.config"
 
 [nvim]
 file = "nvim"
 parent = "~/.config"
 
+[starship]
+file = "starship"
+parent = "/home/josh/.config"
+
 [kanata]
 file = "keybs"
-parent = "~/.config"
-
-[zathura]
-file = "zathura"
 parent = "~/.config"
 
 [xplr]
 file = "xplr"
 parent = "~/.config"
 
-[sway]
-file = "sway"
-parent = "~/.config"
-
-[waybar]
-file = "waybar"
+[tofi]
+file = "tofi"
 parent = "~/.config"
 
 [wezterm]
 file = ".wezterm.lua"
 parent = "~/"
+
+[zathura]
+file = "zathura"
+parent = "~/.config"
+
+[swaylock]
+file = "swaylock"
+parent = "~/.config"
+
+[fish]
+file = "/home/josh/.config/fish"
+parent = "config.fish"
+
+[vim]
+file = ".vimrc"
+parent = "~/"
+
+[sway]
+file = "sway"
+parent = "~/.config"
+
+[tex]
+file = "texmf"
+parent = "~/"
+
+[waybar]
+file = "waybar"
+parent = "~/.config"
