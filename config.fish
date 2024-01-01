@@ -1,4 +1,4 @@
-fish_add_path -p /usr/local/sbin /usr/local/bin /usr/bin
+fish_add_path -p ~/.cargo/bin ~/.local/bin /usr/local/sbin /usr/local/bin /usr/bin
 
 set -e TERMCAP
 set -e MANPATH
@@ -25,7 +25,6 @@ if status is-interactive
     alias grep='grep --color=auto'
     alias nv=nvim
 
-    fish_add_path -p ~/.cargo/bin ~/.local/bin
     fish_vi_key_bindings
     enable_transience
 end
