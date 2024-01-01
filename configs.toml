@@ -1,3 +1,31 @@
+[starship]
+file = "starship.toml"
+parent = "/home/josh/.config"
+
+[dunst]
+file = "dunst"
+parent = "~/.config"
+
+[swaylock]
+file = "swaylock"
+parent = "~/.config"
+
+[vim]
+file = ".vimrc"
+parent = "~/"
+
+[tofi]
+file = "tofi"
+parent = "~/.config"
+
+[tex]
+file = "texmf"
+parent = "~/"
+
+[fish]
+file = "fish"
+parent = "~/.config"
+
 [nvim]
 file = "nvim"
 parent = "~/.config"
@@ -6,36 +34,12 @@ parent = "~/.config"
 file = "keybs"
 parent = "~/.config"
 
-[tex]
-file = "texmf"
-parent = "~/"
-
-[tofi]
-file = "tofi"
-parent = "~/.config"
-
-[vim]
-file = ".vimrc"
-parent = "~/"
-
 [zathura]
 file = "zathura"
 parent = "~/.config"
 
-[dunst]
-file = "dunst"
-parent = "~/.config"
-
 [xplr]
 file = "xplr"
-parent = "~/.config"
-
-[fish]
-file = "fish"
-parent = "~/.config"
-
-[swaylock]
-file = "swaylock"
 parent = "~/.config"
 
 [sway]
