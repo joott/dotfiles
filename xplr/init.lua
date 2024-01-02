@@ -1,11 +1,16 @@
 version = "0.21.3"
 
 local home = os.getenv("HOME")
+package.path = home
+  .. "/.config/xplr/plugins/?/init.lua;"
+  .. home
+  .. "/.config/xplr/plugins/?.lua;"
+  .. package.path
+
 local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
 local xpm_url = "https://github.com/dtomvan/xpm.xplr"
-
 package.path = package.path
-  .. ";"
+.. ";"
   .. xpm_path
   .. "/?.lua;"
   .. xpm_path
@@ -23,13 +28,13 @@ os.execute(
 require("xpm").setup({
   plugins = {
     'dtomvan/xpm.xplr',
-    { name = 'sayanarijit/fzf.xplr' },
-    { name = 'prncss-xyz/icons.xplr' },
-    { 'dtomvan/extra-icons.xplr',
-      after = function()
-          xplr.config.general.table.row.cols[2] = { format = "custom.icons_dtomvan_col_1" }
-      end
-    },
+    'sayanarijit/fzf.xplr',
+    'gitlab:hartan/web-devicons.xplr',
+    'sayanarijit/wl-clipboard.xplr',
+    'sayanarijit/map.xplr',
+    'sayanarijit/command-mode.xplr',
+    'sayanarijit/zoxide.xplr',
+    'sayanarijit/zentable.xplr',
   },
   auto_install = true,
   auto_cleanup = true,
@@ -42,3 +47,18 @@ xplr.config.modes.builtin.default.key_bindings.on_key.x = {
     { SwitchModeCustom = "xpm" },
   },
 }
+
+require("fzf").setup({
+    mode = "default",
+    key = "ctrl-f",
+    bin = "fzf",
+    recursive = true,
+    enter_dir = true,
+})
+
+require("command-mode").setup()
+require("wl-clipboard").setup()
+require("map").setup()
+require("zoxide").setup()
+require("zentable").setup()
+require("icons").setup()
