@@ -32,7 +32,6 @@ require("xpm").setup({
     'gitlab:hartan/web-devicons.xplr',
     'sayanarijit/wl-clipboard.xplr',
     'sayanarijit/map.xplr',
-    'sayanarijit/command-mode.xplr',
     'sayanarijit/zoxide.xplr',
     'sayanarijit/zentable.xplr',
   },
@@ -56,7 +55,6 @@ require("fzf").setup({
     enter_dir = true,
 })
 
-require("command-mode").setup()
 require("wl-clipboard").setup()
 require("map").setup()
 require("zoxide").setup()

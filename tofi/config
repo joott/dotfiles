@@ -17,3 +17,4 @@ input-background-padding = 7
 input-background-corner-radius = 3
 clip-to-padding = false
 corner-radius = 8
+matching-algorithm=fuzzy
