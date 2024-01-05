@@ -1,5 +1,5 @@
 format = """
-[╭](id_color)\
+[┏](id_color)\
 [](id_color)\
 $os\
 $username\
@@ -23,7 +23,7 @@ $julia\
 $lua\
 [](fg:lang_color)\
 $line_break\
-[╰](id_color)$character
+[┗](id_color)$character
 """
 
 palette = "catppuccin"
@@ -70,12 +70,12 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [character]
 disabled = false
-success_symbol = '[─󰁔](fg:id_color)'
-error_symbol = '[⟮](fg:id_color)[󰁔](fg:red)'
-vimcmd_symbol = '[⟮](fg:id_color)[](fg:green)'
-vimcmd_replace_one_symbol = '[⟮](fg:id_color)[](fg:mauve)'
-vimcmd_replace_symbol = '[⟮](fg:id_color)[](fg:mauve)'
-vimcmd_visual_symbol = '[⟮](fg:id_color)[](fg:yellow)'
+success_symbol = '[󱢶 ](fg:id_color)[󰁔](fg:green)'
+error_symbol = '[󱩂 ](fg:id_color)[󰁔](fg:red)'
+vimcmd_symbol = '[ ](fg:id_color)[](fg:green)'
+vimcmd_replace_one_symbol = '[ ](fg:id_color)[](fg:mauve)'
+vimcmd_replace_symbol = '[ ](fg:id_color)[](fg:mauve)'
+vimcmd_visual_symbol = '[ ](fg:id_color)[](fg:yellow)'
 
 [sudo]
 disabled = false
