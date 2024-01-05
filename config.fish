@@ -2,7 +2,6 @@ fish_add_path -p ~/.cargo/bin ~/.local/bin /usr/local/sbin /usr/local/bin /usr/b
 
 set -e TERMCAP
 set -e MANPATH
-set -U fish_greeting
 set -Ux STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 pyenv init - | source
@@ -12,6 +11,10 @@ starship init fish | source
 function starship_transient_prompt_func
     set --local -x STARSHIP_CONFIG ~/.config/starship/transient.toml
     starship module character
+end
+
+function fish_greeting
+    set_color f0c6c6; echo 󰑂󱠡; set_color normal
 end
 
 function xcd
