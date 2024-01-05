@@ -10,7 +10,6 @@
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
     },
     "sway/window": {
         "max-length": 60,

@@ -21,6 +21,8 @@ set $term wezterm
 set $menu tofi-drun | xargs swaymsg exec --
 
 ### Output configuration
+# exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+
 exec swaybg --image ~/Pictures/backgrounds/arch-rainbow-1920x1080.png --mode center --color=#302d41
 
 ### Idle configuration
