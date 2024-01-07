@@ -1,4 +1,4 @@
-local map = vim.keymap.set;
+local map = vim.keymap.set
 local opts = { noremap = false, silent = true}
 
 map('', 'o', '<Plug>Markdown_NewLineBelow<Esc>', opts)

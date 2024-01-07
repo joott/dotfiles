@@ -83,3 +83,6 @@ imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-o
 map('i', '<S-Tab>', [[<cmd>lua require'luasnip'.jump(-1)<Cr>]], opts)
 map('s', '<Tab>', [[<cmd>lua require('luasnip').jump(1)<Cr>]], opts)
 map('s', '<Tab>', [[<cmd>lua require('luasnip').jump(-1)<Cr>]], opts)
+
+map('', '<Plug>', '<Plug>Markdown_NewLineAbove', opts)
+map('', '<Plug>', '<Plug>Markdown_NewLineBelow', opts)
