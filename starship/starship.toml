@@ -3,7 +3,9 @@ format = """
 [](id_color)\
 $os\
 $username\
+$hostname\
 $sudo\
+[ ](bg:id_color)\
 [](fg:id_color bg:dir_color)\
 $directory\
 [](fg:dir_color bg:git_color)\
@@ -48,8 +50,19 @@ Arch = "󰣇"
 
 [username]
 show_always = true
-format = '[ $user ](bg:id_color fg:black bold)'
+format = '[ $user](bg:id_color fg:black bold)'
 disabled = false
+
+[hostname]
+ssh_symbol = ''
+style = "bg:id_color fg:black bold"
+format = '[@$hostname]($style)'
+
+[sudo]
+disabled = false
+symbol = " "
+style = "bg:id_color fg:black"
+format = '[$symbol]($style)'
 
 [directory]
 style = "bg:dir_color"
@@ -76,12 +89,6 @@ vimcmd_symbol = '[ ](fg:id_color)[](fg:green)'
 vimcmd_replace_one_symbol = '[ ](fg:id_color)[](fg:mauve)'
 vimcmd_replace_symbol = '[ ](fg:id_color)[](fg:mauve)'
 vimcmd_visual_symbol = '[ ](fg:id_color)[](fg:yellow)'
-
-[sudo]
-disabled = false
-symbol = " "
-style = "bg:id_color fg:black"
-format = '[$symbol]($style)'
 
 [nodejs]
 symbol = ""
