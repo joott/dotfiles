@@ -246,6 +246,10 @@ return {
         { n.t("\\rho") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="'ch", snippetType="autosnippet"},
+        { n.t("\\chi") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="del", snippetType="autosnippet"},
         { n.t("\\Del") },
         { condition = h.in_mathzone }
@@ -328,6 +332,10 @@ return {
     ),
     n.s({trig="'dg", snippetType="autosnippet", wordTrig=false},
         { n.t("^{\\circ}") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="'da", snippetType="autosnippet", wordTrig=false},
+        { n.t("^{\\dag}") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="oxx", snippetType="autosnippet"},

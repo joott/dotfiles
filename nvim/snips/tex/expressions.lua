@@ -26,8 +26,8 @@ local parens = function(_, parent)
     if open == "'a" then open = "\\langle" end
 
     local node = n.sn(1,
-        n.fmta("\\left<> <> \\right<>",
-            { n.t(open), n.i(1), n.t(closer(open)) })
+        n.fmta("\\left<> <> \\right<><>",
+            { n.t(open), n.i(1), n.t(closer(open)), n.i(0) })
     )
     return node
 end
@@ -97,7 +97,7 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="df", wordTrig=false, snippetType="autosnippet"},
-        { n.t("\\diff") },
+        { n.t("\\diff ") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="pf", wordTrig=false, snippetType="autosnippet"},
@@ -133,8 +133,8 @@ return {
         { condition = h.in_enumerate * h.line_begin }
     ),
     n.s({trig = "ceil", snippetType="autosnippet"},
-        n.fmta("\\left\\lceil <> \\right\\rceil",
-            { n.i(1) }),
+        n.fmta("\\left\\lceil <> \\right\\rceil<>",
+            { n.i(1), n.i(0) }),
         { condition = h.in_mathzone }
     ),
     n.s({trig = "floor", snippetType="autosnippet"},

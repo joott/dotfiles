@@ -60,7 +60,7 @@ format = '[@$hostname]($style)'
 
 [sudo]
 disabled = false
-symbol = " "
+symbol = " "
 style = "bg:id_color fg:black"
 format = '[$symbol]($style)'
 

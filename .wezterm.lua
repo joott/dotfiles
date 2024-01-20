@@ -51,7 +51,7 @@ config.font_size = 11.0
 
 config.hide_tab_bar_if_only_one_tab = true
 
-config.front_end = "WebGpu"
+-- config.front_end = "Software"
 
 -- and finally, return the configuration to wezterm
 return config

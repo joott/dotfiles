@@ -74,6 +74,9 @@ map('n', '<leader>vc', ':VimtexClean!<CR>')
 map('i', '<C-f>', [[<Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>]], opts)
 map('n', '<C-f>', [[: silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>]], opts)
 
+map('i', '<C-x>', [[<Esc>: silent exec '.!xoppdog shake "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>]], opts)
+map('n', '<C-x>', [[: silent exec '!xoppdog fetch "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>]], opts)
+
 vim.cmd([[
 " press <Tab> to expand or jump in a snippet. These can also be mapped separately
 " via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
@@ -84,5 +87,4 @@ map('i', '<S-Tab>', [[<cmd>lua require'luasnip'.jump(-1)<Cr>]], opts)
 map('s', '<Tab>', [[<cmd>lua require('luasnip').jump(1)<Cr>]], opts)
 map('s', '<Tab>', [[<cmd>lua require('luasnip').jump(-1)<Cr>]], opts)
 
-map('', '<Plug>', '<Plug>Markdown_NewLineAbove', opts)
-map('', '<Plug>', '<Plug>Markdown_NewLineBelow', opts)
+map('n', '<leader>xx', function() require('trouble').toggle() end)

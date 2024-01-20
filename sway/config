@@ -18,10 +18,10 @@ set $right o
 
 set $term wezterm
 
-set $menu tofi-drun | xargs swaymsg exec --
+set $menu rofi -show drun | xargs swaymsg exec --
 
 ### Output configuration
-# exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
 
 exec swaybg --image ~/Pictures/backgrounds/arch-rainbow-1920x1080.png --mode center --color=#302d41
 
@@ -40,6 +40,14 @@ input type:touchpad {
     dwt enabled
     natural_scroll enabled
     middle_emulation enabled
+}
+
+input type:touch {
+    map_to_output eDP-1
+}
+
+input type:tablet_tool {
+    map_to_output eDP-1
 }
 
 ### Key bindings
@@ -164,12 +172,13 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 bindsym $mod+b exec firefox
 bindsym $mod+x exec xournalpp
-bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
+# bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
+bindsym $mod+c exec "lectern open"
 bindsym $mod+d exec "wezterm start --cwd ~/nextcloud/notebook/md xch nvim"
 bindsym $mod+Shift+c exec "wezterm start --class 'numbat' numbat"
 bindsym $mod+Shift+g exec "feh -Z -F -B black /home/josh/Pictures/game.png"
@@ -189,6 +198,7 @@ title_align center
 default_border pixel
 
 for_window [app_id="numbat"] floating enable
+for_window [app_id="xoppdoggin"] floating enable; resize set 1800 1000
 for_window [class="Inkscape"] floating enable; resize set 1800 1000
 for_window [class="vimscape"] floating enable; resize set 600 300; move down 300; move left 550
 
