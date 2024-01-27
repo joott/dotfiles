@@ -1,0 +1,28 @@
+(defcfg
+  linux-dev-names-include (
+    "Cradio Keyboard"
+    "ZMK Project Cradio Keyboard"
+  )
+)
+
+(defalias
+  mau (movemouse-accel-up 5 1000 1 5)
+  mal (movemouse-accel-left 5 1000 1 5)
+  mad (movemouse-accel-down 5 1000 1 5)
+  mar (movemouse-accel-right 5 1000 1 5)
+
+  mwu (mwheel-up 1 1)
+  mwl (mwheel-left 1 1)
+  mwd (mwheel-down  1 1)
+  mwr (mwheel-right 1 1)
+)
+
+(defsrc
+    f17 f18 f19 f20
+    f21 f22 f23 f24
+)
+
+(deflayer mouse
+    @mwl @mwd @mwu @mwr
+    @mal @mad @mau @mar
+)

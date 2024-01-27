@@ -207,4 +207,14 @@ return {
             ]],
             { n.i(0) }),
             { condition = h.in_text * h.line_begin })
+    -- split display equation
+    n.s({trig="sld", snippetType="autosnippet"},
+        n.fmta(
+            [[
+                \[ \begin{split}
+                    <>
+                \end{split} \]
+            ]],
+            { n.i(0) }),
+            { condition = h.in_text * h.line_begin })
 }
