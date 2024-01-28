@@ -69,12 +69,12 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="pd", snippetType="autosnippet"},
-        n.fmta("\\pd[]{<>}{<>} ",
+        n.fmta("\\pd[]{<>}{<>}",
             { n.i(1), n.i(2) }),
         { condition = h.in_mathzone }
     ),
     n.s({trig="pD", snippetType="autosnippet"},
-        n.fmta("\\pd[<>]{<>}{<>} ",
+        n.fmta("\\pd[<>]{<>}{<>}",
             { n.i(1), n.i(2), n.i(3) }),
         { condition = h.in_mathzone }
     ),
