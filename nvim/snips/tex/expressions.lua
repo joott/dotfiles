@@ -58,22 +58,22 @@ return {
         { n.t("\\sum") },
         { condition = h.in_mathzone }
     ),
-    n.s({trig="od", snippetType="autosnippet"},
-        n.fmta("\\od[]{<>}{<>}",
+    n.s({trig="od", snippetType="autosnippet", priority=100},
+        n.fmta("\\od{<>}{<>}",
             { n.i(1), n.i(2) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig="oD", snippetType="autosnippet"},
+    n.s({trig="'od", snippetType="autosnippet", priority=200},
         n.fmta("\\od[<>]{<>}{<>}",
             { n.i(1), n.i(2), n.i(3) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig="pd", snippetType="autosnippet"},
-        n.fmta("\\pd[]{<>}{<>}",
+    n.s({trig="pd", snippetType="autosnippet", priority=100},
+        n.fmta("\\pd{<>}{<>}",
             { n.i(1), n.i(2) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig="pD", snippetType="autosnippet"},
+    n.s({trig="'pd", snippetType="autosnippet", priority=200},
         n.fmta("\\pd[<>]{<>}{<>}",
             { n.i(1), n.i(2), n.i(3) }),
         { condition = h.in_mathzone }
@@ -206,6 +206,22 @@ return {
     n.s({trig = "eval", snippetType="autosnippet"},
         n.fmta("\\eval{<>}",
             { n.d(1, h.get_visual) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[\^\<(.*?)\|]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+        n.fmta([[\bra{<>}]],
+            { n.f(function(_, parent) return parent.captures[1] end) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[\|(.*?)\^\>]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+        n.fmta([[\ket{<>}]],
+            { n.f(function(_, parent) return parent.captures[1] end) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[\\bra\{(.*?)\}(.*?)\^\>]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+        n.fmta([[\braket{<>}{<>}]],
+            { n.f(function(_, parent) return parent.captures[1] end),
+              n.f(function(_, parent) return parent.captures[2] end) }),
         { condition = h.in_mathzone }
     ),
 }

@@ -27,7 +27,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   qwe (layer-switch qwerty)
   cdh (layer-switch colemakdh)
   oss (one-shot-press 500 lsft) ;; one shot shift
-  sfd (tap-dance 200 (@oss (caps-word 2000) caps)) ;; shift dance
+  sfd (tap-dance 200 (@oss caps)) ;; shift dance
 
   hrt (tap-hold-release 200 200 t lmet)
   hrn (tap-hold-release 200 200 n lmet)
@@ -121,7 +121,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
 _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _     _
   _    _    _    _    _    _    _    @mwl @mwd @mwu @mwr _    _     _
-  _    _    mlft mmid mrgt _    _    @mal @mad @mau @mar _          _
+  _    _    mmid mrgt mlft _    _    @mal @mad @mau @mar _          _
   _    _    _    _    _    _    _    _    _    _    _               _
   _    _    _    _              _              _    _    _     _    _    _
   _    _    _                                                  _    _    _

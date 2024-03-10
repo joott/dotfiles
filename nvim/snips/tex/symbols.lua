@@ -250,6 +250,10 @@ return {
         { n.t("\\chi") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="'na", snippetType="autosnippet"},
+        { n.t("\\nabla") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="del", snippetType="autosnippet"},
         { n.t("\\Del") },
         { condition = h.in_mathzone }
@@ -356,6 +360,10 @@ return {
     ),
     n.s({trig="|>", snippetType="autosnippet"},
         { n.t("\\rhd") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=",,", snippetType="autosnippet", wordTrig = false},
+        { n.t("\\,") },
         { condition = h.in_mathzone }
     ),
 }

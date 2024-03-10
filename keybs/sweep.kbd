@@ -1,7 +1,7 @@
 (defcfg
-  linux-dev-names-include (
-    "Cradio Keyboard"
-    "ZMK Project Cradio Keyboard"
+  linux-dev-names-exclude (
+    "AT Translated Set 2 keyboard"
+    "TPPS/2 Elan TrackPoint"
   )
 )
 
