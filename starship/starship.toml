@@ -47,6 +47,7 @@ Linux = "󰌽"
 Gentoo = "󰣨"
 Fedora = "󰣛"
 Arch = "󰣇"
+Ubuntu = "󰕈"
 
 [username]
 show_always = true

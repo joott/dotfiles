@@ -188,6 +188,18 @@ return {
         { condition = h.in_mathzone }
     ),
 
+    n.s({trig="'ti", regTrig=true, snippetType="autosnippet", priority=100},
+        n.fmta("\\tilde{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9]|\\[a-z]+\{\\?[A-Za-z0-9]+\})'ti]],
+            wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        n.fmta("\\tilde{<>}",
+            { n.f(function(_, parent) return parent.captures[1] end) }),
+        { condition = h.in_mathzone }
+    ),
+
     n.s({trig="mcal", snippetType="autosnippet"},
         n.fmta("\\mathcal{<>}",
             { n.i(1) }),
@@ -328,6 +340,10 @@ return {
     ),
     n.s({trig="'xi", snippetType="autosnippet"},
         { n.t("\\xi") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="'ka", snippetType="autosnippet"},
+        { n.t("\\kappa") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="'ci", snippetType="autosnippet"},

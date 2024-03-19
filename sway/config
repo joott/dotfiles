@@ -180,6 +180,7 @@ bindsym $mod+x exec xournalpp
 # bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
 bindsym $mod+c exec "lectern open"
 bindsym $mod+d exec "wezterm start --cwd ~/nextcloud/notebook/md xch nvim"
+bindsym $mod+Shift+t exec "wezterm start --class 'float'"
 bindsym $mod+Shift+c exec "wezterm start --class 'numbat' numbat"
 bindsym $mod+Shift+g exec "feh -Z -F -B black /home/josh/Pictures/game.png"
 
@@ -197,6 +198,7 @@ gaps outer 0px
 title_align center
 default_border pixel
 
+for_window [app_id="float"] floating enable
 for_window [app_id="numbat"] floating enable
 for_window [app_id="xoppdoggin"] floating enable; resize set 1800 1000
 for_window [class="Inkscape"] floating enable; resize set 1800 1000
