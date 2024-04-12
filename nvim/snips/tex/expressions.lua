@@ -114,11 +114,6 @@ return {
             { n.d(1, h.get_visual) }),
         { condition = h.in_text }
     ),
-    n.s({trig = "xb", snippetType="autosnippet"},
-        n.fmta("\\text{\\textbf{<>}}",
-            { n.d(1, h.get_visual) }),
-        { condition = h.in_mathzone }
-    ),
     n.s({trig = "tuu", snippetType="autosnippet"},
         n.fmta("\\underline{<>}",
             { n.d(1, h.get_visual) }),
@@ -208,20 +203,27 @@ return {
             { n.d(1, h.get_visual) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig=[[\^\<(.*?)\|]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+    n.s({trig=[[\<(.*?)\|`]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
         n.fmta([[\bra{<>}]],
             { n.f(function(_, parent) return parent.captures[1] end) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig=[[\|(.*?)\^\>]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+    n.s({trig=[[\|(.*?)\>\^]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=100},
         n.fmta([[\ket{<>}]],
             { n.f(function(_, parent) return parent.captures[1] end) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig=[[\\bra\{(.*?)\}(.*?)\^\>]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet"},
+    n.s({trig=[[\<(.*?)\|(.*?)\>\^]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=200},
         n.fmta([[\braket{<>}{<>}]],
             { n.f(function(_, parent) return parent.captures[1] end),
               n.f(function(_, parent) return parent.captures[2] end) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[\<(.*?)\|(.*?)\|(.*?)\>\^]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=300},
+        n.fmta([[\bra{<>}<>\ket{<>}]],
+            { n.f(function(_, parent) return parent.captures[1] end),
+              n.f(function(_, parent) return parent.captures[2] end),
+              n.f(function(_, parent) return parent.captures[3] end) }),
         { condition = h.in_mathzone }
     ),
 }
