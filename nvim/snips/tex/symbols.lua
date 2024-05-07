@@ -157,7 +157,8 @@ return {
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig=[[((\\[a-zA-Z]+)|[A-Za-z0-9])hat]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=200},
+    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9]|\\[a-z]+\{\\?[A-Za-z0-9]+\})hat]],
+            wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
         n.fmta("\\hat{<>}",
             { n.f(function(_, parent) return parent.captures[1] end) }),
         { condition = h.in_mathzone }
@@ -168,7 +169,8 @@ return {
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9])(!\?|\?!)]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=200},
+    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9]|\\[a-z]+\{\\?[A-Za-z0-9]+\})(!\?|\?!)]],
+            wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
         n.fmta("\\vec{<>}",
             { n.f(function(_, parent) return parent.captures[1] end) }),
         { condition = h.in_mathzone }
