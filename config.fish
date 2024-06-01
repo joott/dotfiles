@@ -1,4 +1,4 @@
-fish_add_path -p ~/.cargo/bin ~/.local/bin /usr/local/sbin /usr/local/bin /usr/bin
+fish_add_path -p ~/.juliaup/bin ~/.cargo/bin ~/.local/bin /usr/local/sbin /usr/local/bin /usr/bin
 
 set -e TERMCAP
 set -e MANPATH
