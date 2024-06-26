@@ -49,7 +49,7 @@ require("mason-lspconfig").setup_handlers {
     ["julials"] = function ()
         lspconfig.julials.setup {
             on_attach = on_attach,
-            julia_env_path = "/home/josh/.julia/environments/v1.9/",
+            julia_env_path = "/home/josh/.julia/environments/v1.10/",
             filetypes = { "julia", "jl" },
             single_file_support = true
         }
