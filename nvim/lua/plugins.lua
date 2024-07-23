@@ -25,7 +25,6 @@ require("lazy").setup({
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
     'feline-nvim/feline.nvim',
-    'tpope/vim-fugitive',
     'axvr/zepl.vim',
     'lervag/vimtex',
     'ixru/nvim-markdown',

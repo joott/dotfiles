@@ -225,7 +225,7 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="'Ph", snippetType="autosnippet"},
-        { n.t("\\phi") },
+        { n.t("\\Phi") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="'vp", snippetType="autosnippet"},
