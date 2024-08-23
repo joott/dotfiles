@@ -6,7 +6,7 @@ include catppuccin-macchiato
 
 exec --no-startup-id dex -ae sway
 
-font pango:Font Awesome 10
+font pango:Fira Sans 10
 
 ### Variables
 set $mod Mod4
@@ -179,7 +179,7 @@ bindsym $mod+b exec firefox
 bindsym $mod+x exec xournalpp
 # bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
 bindsym $mod+c exec "lectern open"
-bindsym $mod+d exec "wezterm start --cwd ~/nextcloud/notebook/md xch nvim"
+bindsym $mod+d exec "wezterm start --cwd ~/nextcloud/escritoire xch nvim"
 bindsym $mod+Shift+t exec "wezterm start --class 'float'"
 bindsym $mod+Shift+c exec "wezterm start --class 'numbat' numbat"
 bindsym $mod+Shift+g exec "feh -Z -F -B black /home/josh/Pictures/game.png"

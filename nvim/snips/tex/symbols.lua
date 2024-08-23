@@ -133,6 +133,18 @@ return {
         { n.t("\\subseteq") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="cq", snippetType="autosnippet"},
+        { n.t("\\subset") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="qq", snippetType="autosnippet"},
+        { n.t("\\supset") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="qc", snippetType="autosnippet"},
+        { n.t("\\supset") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="Nn", snippetType="autosnippet"},
         { n.t("\\cap") },
         { condition = h.in_mathzone }
@@ -202,16 +214,32 @@ return {
         { condition = h.in_mathzone }
     ),
 
-    n.s({trig="mcal", snippetType="autosnippet"},
+    n.s({trig=[[([a-zA-Z])(:#|#:)]], wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        n.fmta("\\mathcal{<>}",
+            { n.f(function(_, parent) return string.upper(parent.captures[1]) end) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="(:#|#:)", wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=100},
         n.fmta("\\mathcal{<>}",
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
-    n.s({trig="mbb", snippetType="autosnippet"},
+
+    n.s({trig=[[([a-zA-Z])(@#|#@)]], wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        n.fmta("\\mathbb{<>}",
+            { n.f(function(_, parent) return string.upper(parent.captures[1]) end) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="1(@#|#@)", wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        { n.t("\\1") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="(@#|#@)", wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=100},
         n.fmta("\\mathbb{<>}",
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
+
     n.s({trig="'hb", snippetType="autosnippet"},
         { n.t("\\hbar") },
         { condition = h.in_mathzone }
@@ -366,6 +394,10 @@ return {
     ),
     n.s({trig="opp", snippetType="autosnippet"},
         { n.t("\\oplus") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="upp", snippetType="autosnippet"},
+        { n.t("\\uplus") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="pm", snippetType="autosnippet"},

@@ -58,6 +58,14 @@ return {
         { n.t("\\sum") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="'bu", snippetType="autosnippet", priority=100},
+        { n.t("\\bigcup") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="'ba", snippetType="autosnippet", priority=100},
+        { n.t("\\bigcap") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="od", snippetType="autosnippet", priority=100},
         n.fmta("\\od{<>}{<>}",
             { n.i(1), n.i(2) }),
@@ -101,7 +109,7 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="pf", wordTrig=false, snippetType="autosnippet"},
-        { n.t("\\pdiff") },
+        { n.t("\\pdiff ") },
         { condition = h.in_mathzone }
     ),
     n.s({trig = "tii", snippetType="autosnippet"},
@@ -116,6 +124,11 @@ return {
     ),
     n.s({trig = "tuu", snippetType="autosnippet"},
         n.fmta("\\underline{<>}",
+            { n.d(1, h.get_visual) }),
+        { condition = h.in_text }
+    ),
+    n.s({trig = "txt", snippetType="autosnippet"},
+        n.fmta("\\texttt{<>}",
             { n.d(1, h.get_visual) }),
         { condition = h.in_text }
     ),
