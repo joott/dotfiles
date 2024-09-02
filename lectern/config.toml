@@ -1,0 +1,3 @@
+root = "/home/josh/nextcloud/escritoire/university"
+lecture_template = "/home/josh/.config/lectern/lecture_template.tex"
+homework_template = "/home/josh/.config/lectern/homework_template.tex"

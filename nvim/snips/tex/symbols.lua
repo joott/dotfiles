@@ -109,6 +109,14 @@ return {
         { n.t("\\leftrightarrow") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="^^", snippetType="autosnippet"},
+        { n.t("\\uparrow") },
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="vv", snippetType="autosnippet"},
+        { n.t("\\downarrow") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="!>", snippetType="autosnippet"},
         { n.t("\\mapsto") },
         { condition = h.in_mathzone }
