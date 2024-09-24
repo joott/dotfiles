@@ -162,12 +162,12 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="bar", snippetType="autosnippet", priority=100},
-        n.fmta("\\overline{<>}",
+        n.fmta("\\bar{<>}",
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
     n.s({trig=[[((\\[a-zA-Z]+)|[A-Za-z0-9])bar]], trigEngine="ecma", wordTrig=false, snippetType="autosnippet", priority=200},
-        n.fmta("\\overline{<>}",
+        n.fmta("\\bar{<>}",
             { n.f(function(_, parent) return parent.captures[1] end) }),
         { condition = h.in_mathzone }
     ),
