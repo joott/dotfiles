@@ -146,7 +146,7 @@ return {
         { condition = h.in_mathzone }
     ),
     n.s({trig="qq", snippetType="autosnippet"},
-        { n.t("\\supset") },
+        { n.t("\\supseteq") },
         { condition = h.in_mathzone }
     ),
     n.s({trig="qc", snippetType="autosnippet"},
