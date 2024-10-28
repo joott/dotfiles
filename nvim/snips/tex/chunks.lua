@@ -82,7 +82,7 @@ local enumType = function (_, snip)
     if type == "n" then
         return "\\arabic*."
     elseif type == "a" then
-        return "\\alph*)"
+        return "(\\alph*)"
     elseif type == "i" then
         return "(\\roman*)"
     end

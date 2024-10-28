@@ -161,6 +161,10 @@ return {
         { n.t("\\cup") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="uU", snippetType="autosnippet"},
+        { n.t("\\sqcup") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="bar", snippetType="autosnippet", priority=100},
         n.fmta("\\bar{<>}",
             { n.i(1) }),
