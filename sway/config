@@ -208,6 +208,6 @@ bar swaybar_command waybar
 
 exec dunst
 
-bindsym Print exec "shotman -c region"
+bindsym Print exec "grim -g \"$(slurp)\" - | wl-copy -t image/png"
 
 include /etc/sway/config.d/*
