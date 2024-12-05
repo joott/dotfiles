@@ -251,6 +251,16 @@ return {
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
+    n.s({trig="mfr", wordTrig=false, trigEngine="ecma", snippetType="autosnippet"},
+        n.fmta("\\mathfrak{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig="mrm", wordTrig=false, trigEngine="ecma", snippetType="autosnippet"},
+        n.fmta("\\mathrm{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
 
     n.s({trig="'hb", snippetType="autosnippet"},
         { n.t("\\hbar") },
