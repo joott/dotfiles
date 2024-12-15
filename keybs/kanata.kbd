@@ -24,6 +24,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   nav (layer-while-held navigation)
   num (one-shot-press-pcancel 1500 (layer-while-held numbers))
   sym (one-shot-press-pcancel 1500 (layer-while-held symbols))
+  fun (one-shot-press-pcancel 1500 (layer-while-held function))
   qwe (layer-switch qwerty)
   cdh (layer-switch colemakdh)
   oss (one-shot-press 500 lsft) ;; one shot shift
@@ -80,7 +81,7 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
 (deflayer colemakdh
 esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
-  tab  q    w    f    p    b    j    l    u    y    ;    [     ]    \
+  tab  q    w    f    p    b    j    l    u    y    @fun [     ]    \
   esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri o    '          ret
   @sfd x    c    d    v    z    k    h    '    @sym bspc            @sfd
   wkup lctl lmet lalt           spc            @num sys  @qwe  pgdn up   pgup
@@ -125,6 +126,16 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   _    _    _    _    _    _    _    _    _    _    _               _
   _    _    _    _              _              _    _    _     _    _    _
   _    _    _                                                  _    _    _
+)
+
+(deflayer function
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    f4   f5   f6   _    _    _    _    _    _    _    _     _
+  f12  f11  f1   f2   f3   _    _    _    _    _    _    _          _
+  _    f7   f8   f9   _    _    _    -    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  f10  _    _                                                  _    _    _
 )
 
 (deflayer qwerty
