@@ -1,6 +1,6 @@
 [rofi]
 file = "rofi"
-parent = "/home/josh/.config"
+parent = "~/.config"
 
 [swaylock]
 file = "swaylock"
@@ -12,7 +12,7 @@ parent = "~/.config"
 
 [lectern]
 file = "lectern"
-parent = "/home/josh/.config"
+parent = "~/.config"
 
 [kanata]
 file = "keybs"
@@ -20,7 +20,7 @@ parent = "~/.config"
 
 [tmux]
 file = ".tmux.conf"
-parent = "/home/josh/"
+parent = "~/"
 
 [starship]
 file = "starship"
