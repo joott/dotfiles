@@ -390,6 +390,10 @@ return {
         { n.t("\\sigma") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="'Si", snippetType="autosnippet"},
+        { n.t("\\Sigma") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="'xi", snippetType="autosnippet"},
         { n.t("\\xi") },
         { condition = h.in_mathzone }
