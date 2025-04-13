@@ -330,6 +330,10 @@ return {
         { n.t("\\approx") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="=~", snippetType="autosnippet"},
+        { n.t("\\cong") },
+        { condition = h.in_mathzone }
+    ),
     n.s({trig="'de", snippetType="autosnippet"},
         { n.t("\\delta") },
         { condition = h.in_mathzone }
