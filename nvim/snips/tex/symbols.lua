@@ -261,6 +261,11 @@ return {
             { n.i(1) }),
         { condition = h.in_mathzone }
     ),
+    n.s({trig="msf", wordTrig=false, trigEngine="ecma", snippetType="autosnippet"},
+        n.fmta("\\mathsf{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
 
     n.s({trig="'hb", snippetType="autosnippet"},
         { n.t("\\hbar") },
