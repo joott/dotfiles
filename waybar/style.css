@@ -131,12 +131,15 @@ label:focus {
 }
 
 #cpu {
-    border-top: 3px solid @peach;
+    border-top: 3px solid @teal;
+    color: @teal;
+
 }
 
 #memory {
-    border-top: 3px solid @peach;
+    border-top: 3px solid @sapphire;
     padding-right: 15px;
+    color: @sapphire;
 }
 
 #disk {
@@ -172,8 +175,8 @@ label:focus {
 }
 
 #temperature {
-    border-top: 3px solid @teal;
-    color: @teal;
+    border-top: 3px solid @green;
+    color: @green;
     padding-right: 12px;
 }
 
