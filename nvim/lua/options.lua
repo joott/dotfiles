@@ -1,27 +1,36 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-
-vim.opt.smartindent = false
-vim.opt.autoindent = true
-
-vim.opt.wrap = false
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "no"
-vim.opt.cursorline = true
-vim.opt.cursorlineopt = "number"
-vim.opt.isfname:append("@-@")
-
 vim.cmd "set undofile"
-
+-- vim.opt.isfname:append("@-@")
 vim.g.mapleader = ' '
 
-vim.opt.guifont = "FiraCode:h10"
+local options = {
+    nu = true,
+    relativenumber = true,
+
+    tabstop = 4,
+    softtabstop = 4,
+    shiftwidth = 4,
+    expandtab = true,
+
+    smartindent = false,
+    autoindent = true,
+
+    wrap = false,
+
+    hlsearch = false,
+    incsearch = true,
+
+    scrolloff = 8,
+    signcolumn = "no",
+    cursorline = true,
+    cursorlineopt = "number",
+
+    ignorecase = true,
+    smartcase = true,
+
+    guifont = "FiraCode:h10",
+    showmode = false,
+}
+
+for k, v in pairs(options) do
+	vim.opt[k] = v
+end
