@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "nvim-tree/nvim-web-devicons",
-    "ojroques/nvim-bufdel",
     "mbbill/undotree",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -25,20 +24,31 @@ require("lazy").setup({
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip',
     'feline-nvim/feline.nvim',
-    'axvr/zepl.vim',
     'lervag/vimtex',
-    'ixru/nvim-markdown',
-    'mg979/vim-visual-multi',
-    'stevearc/oil.nvim',
+    'MeanderingProgrammer/render-markdown.nvim',
+    'sitiom/nvim-numbertoggle',
+    'folke/twilight.nvim',
+    'lewis6991/gitsigns.nvim',
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { 'echasnovski/mini.files', version = '*' },
+    { 'echasnovski/mini.trailspace', version = '*' },
+    { 'numToStr/Comment.nvim', lazy = false, },
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        "goolord/alpha-nvim",
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+          local startify = require("alpha.themes.startify")
+          startify.file_icons.provider = "devicons"
+          require("alpha").setup(
+            startify.config
+          )
+        end,
+    },
+    {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     { "catppuccin/nvim", name = "catppuccin" },
-    {
-        'akinsho/bufferline.nvim', version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons'
-    },
     {
 		"nvim-treesitter/nvim-treesitter",
 		build = function()
@@ -51,19 +61,6 @@ require("lazy").setup({
         build = "make install_jsregexp"
     },
     {
-        'numToStr/Comment.nvim',
-        opts = {
-            -- add any options here
-        },
-        lazy = false,
-    },
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    },
-    {
         "smoka7/hop.nvim",
         version = "*",
         config = function()
@@ -71,7 +68,22 @@ require("lazy").setup({
         end,
     },
     {
-        'folke/trouble.nvim',
-        dependencies = { "nvim-tree/nvim-web-devicons" },
+        'romgrk/barbar.nvim',
+        init = function() vim.g.barbar_auto_setup = false end,
+        opts = {
+            -- Set the filetypes which barbar will offset itself for
+            sidebar_filetypes = {
+                undotree = {
+                  text = 'undotree',
+                  align = 'center', -- *optionally* specify an alignment (either 'left', 'center', or 'right')
+                },
+            },
+        },
+        version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    }
 })
