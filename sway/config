@@ -175,7 +175,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
-bindsym $mod+b exec firefox
+bindsym $mod+b exec zen-browser
 bindsym $mod+x exec xournalpp
 # bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
 bindsym $mod+c exec "lectern open"
@@ -217,6 +217,7 @@ exec dunst
 exec thunderbird
 exec keepassxc
 exec feishin
+exec gammastep
 
 bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
 
