@@ -27,6 +27,7 @@ if status is-interactive
     alias cd='z'
     alias grep='grep --color=auto'
     alias nv=nvim
+    alias lg=lazygit
 
     fish_vi_key_bindings
     enable_transience
