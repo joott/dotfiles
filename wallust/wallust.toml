@@ -20,8 +20,8 @@ transient_star.target = '~/.config/starship/transient.toml'
 sway.template = 'colors_sway'
 sway.target = '~/.config/sway/colors'
 
-neopywal.template = 'colors_neowallust.vim'
-neopywal.target = '~/.local/share/nvim/lazy/neopywal/palettes/wallust.vim'
+neopywal.template = 'colors_neopywal.vim'
+neopywal.target = '~/.cache/wallust/colors_neopywal.vim'
 
 rofi.template = 'colors_rofi.rasi'
 rofi.target = '~/.config/rofi/colors.rasi'
