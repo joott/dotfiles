@@ -1,0 +1,8 @@
+[general]
+overlay = no
+
+[gallery]
+pstore = yes
+
+[keys.gallery]
+Return = exec echo "%"; exit

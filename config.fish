@@ -4,6 +4,8 @@ set -e TERMCAP
 set -e MANPATH
 set -Ux STARSHIP_CONFIG ~/.config/starship/starship.toml
 
+source ~/.config/fish/colors.fish
+
 pyenv init - | source
 zoxide init fish | source
 starship init fish | source
@@ -14,7 +16,7 @@ function starship_transient_prompt_func
 end
 
 function fish_greeting
-    set_color f0c6c6; echo 󰑂󱠡; set_color normal
+    set_color $welcome_color; echo 󰑂󱠡; set_color normal
 end
 
 function xcd
@@ -28,8 +30,6 @@ if status is-interactive
     alias grep='grep --color=auto'
     alias nv=nvim
     alias lg=lazygit
-
-    source ~/.config/fish/colors.fish
 
     fish_vi_key_bindings
     enable_transience

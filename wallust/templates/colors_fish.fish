@@ -37,3 +37,5 @@ set fish_pager_color_selected_background --background={color8.strip}
 set fish_pager_color_selected_completion {foreground.strip}
 set fish_pager_color_selected_description {color8.strip}
 set fish_pager_color_selected_prefix {color10.strip}
+
+set welcome_color {color14.strip}
