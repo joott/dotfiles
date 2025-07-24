@@ -27,7 +27,6 @@ local options = {
     ignorecase = true,
     smartcase = true,
 
-    guifont = "FiraCode:h10",
     showmode = false,
 }
 

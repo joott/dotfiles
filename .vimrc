@@ -1,5 +1,4 @@
 set termguicolors
-colorscheme catppuccin_macchiato
 syntax on
 
 set nu
@@ -11,6 +10,7 @@ set shiftwidth=4
 set expandtab
 
 set smartindent
+set autoindent
 
 set nohlsearch
 set incsearch
@@ -19,6 +19,9 @@ set scrolloff=8
 set signcolumn=no
 set cursorline
 set cursorlineopt=number
+
+set ignorecase
+set smartcase
 
 let mapleader = ' '
 
@@ -33,4 +36,11 @@ noremap J mzJ`z
 noremap o o<Esc>
 noremap O O<Esc>
 
-noremap Q <nop>
+call plug#begin()
+
+" List your plugins here
+Plug 'dylanaraps/wal.vim'
+
+call plug#end()
+
+colorscheme wal

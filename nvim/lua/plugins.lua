@@ -29,6 +29,7 @@ require("lazy").setup({
     'sitiom/nvim-numbertoggle',
     'folke/twilight.nvim',
     'lewis6991/gitsigns.nvim',
+    'xiyaowong/transparent.nvim',
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
     { 'echasnovski/mini.files', version = '*' },
     { 'echasnovski/mini.trailspace', version = '*' },
@@ -85,5 +86,14 @@ require("lazy").setup({
         'windwp/nvim-autopairs',
         event = "InsertEnter",
         config = true
+    },
+    {
+        "RedsXDD/neopywal.nvim",
+        name = "neopywal",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            use_palette = 'wallust',
+        },
     }
 })
