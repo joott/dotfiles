@@ -56,4 +56,4 @@ parent = "/home/josh"
 
 [kitty]
 file = "kitty.conf"
-parent = "/home/josh/.config"
+parent = "/home/josh/.config/kitty"
