@@ -1,8 +1,0 @@
-palette = "catppuccin"
-
-[palettes.catppuccin]
-id_color = "#f0c6c6" # flamingo
-
-[character]
-disabled = false
-success_symbol = '[󰑂󰁔](fg:id_color)'
