@@ -50,6 +50,8 @@ input type:tablet_tool {
     map_to_output eDP-1
 }
 
+mouse_warping container
+
 ### Key bindings
 #
 # Basics:
@@ -113,6 +115,9 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 #
 # Layout stuff:
@@ -185,9 +190,9 @@ bindsym $mod+Shift+g exec feh -Z -F -B black /home/josh/Pictures/game.png
 bindsym $mod+Shift+w exec wallpicker
 
 # target                 title     bg           text        indicator  border
-client.focused           $color7   $background  $foreground $color15   $color7
-client.focused_inactive  $color0   $color0      $foreground 00000000   00000000
-client.unfocused         $color0   $color0      $foreground 00000000   00000000
+client.focused           $color12  $color12     $background $color15   $color12
+client.focused_inactive  $color0   $color0      $foreground $color13   00000000
+client.unfocused         $color0   $color0      $foreground $color13   00000000
 client.urgent            $color13  $background  $color13    $color8    $color13
 client.placeholder       $color8   $background  $foreground $color8    $color8
 client.background        $background
@@ -197,6 +202,8 @@ gaps outer 0px
 
 title_align center
 default_border pixel
+
+force_display_urgency_hint 1500
 
 for_window [app_id="float"] floating enable
 for_window [app_id="numbat"] floating enable; resize set 800 600
