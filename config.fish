@@ -29,6 +29,8 @@ if status is-interactive
     alias nv=nvim
     alias lg=lazygit
 
+    source ~/.config/fish/colors.fish
+
     fish_vi_key_bindings
     enable_transience
 end

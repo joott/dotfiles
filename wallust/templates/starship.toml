@@ -1,0 +1,149 @@
+format = """
+[┏](id_color)\
+[](id_color)\
+$os\
+$username\
+$hostname\
+$sudo\
+[ ](bg:id_color)\
+[](fg:id_color bg:dir_color)\
+$directory\
+[](fg:dir_color bg:git_color)\
+$git_branch\
+$git_status\
+[](fg:git_color bg:lang_color)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+$julia\
+$lua\
+[](fg:lang_color)\
+$line_break\
+[┗](id_color)$character
+"""
+
+palette = "wallust"
+
+[palettes.wallust]
+text_color = "{{background}}"
+id_color = "{{color14}}"
+dir_color = "{{color13}}"
+git_color = "{{color12}}"
+lang_color = "{{color11}}"
+yellow = "#eed49f"
+mauve = "#c6a0f6"
+
+[os]
+disabled = false
+style = "bg:id_color fg:text_color bold"
+
+[os.symbols]
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Arch = "󰣇"
+Ubuntu = "󰕈"
+Debian = "󰣚"
+
+[username]
+show_always = true
+format = '[ $user](bg:id_color fg:text_color bold)'
+disabled = false
+
+[hostname]
+ssh_symbol = ''
+style = "bg:id_color fg:text_color bold"
+format = '[@$hostname]($style)'
+
+[sudo]
+disabled = false
+symbol = " "
+style = "bg:id_color fg:text_color"
+format = '[$symbol]($style)'
+
+[directory]
+style = "bg:dir_color"
+read_only = ""
+format = '[ $path( $read_only) ]($style fg:text_color bold)'
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:git_color fg:text_color bold"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:git_color fg:text_color bold"
+deleted = '󰗨'
+format = '[$all_status$ahead_behind ]($style)'
+
+[character]
+disabled = false
+success_symbol = '[󱢶 ](fg:id_color)[󰁔](fg:green)'
+error_symbol = '[󱩂 ](fg:id_color)[󰁔](fg:red)'
+vimcmd_symbol = '[ ](fg:id_color)[](fg:green)'
+vimcmd_replace_one_symbol = '[ ](fg:id_color)[](fg:mauve)'
+vimcmd_replace_symbol = '[ ](fg:id_color)[](fg:mauve)'
+vimcmd_visual_symbol = '[ ](fg:id_color)[](fg:yellow)'
+
+[nodejs]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[golang]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[php]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[java]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[julia]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'
+
+[lua]
+symbol = ""
+style = "bg:lang_color fg:text_color bold"
+format = '[ $symbol( $version) ]($style)'

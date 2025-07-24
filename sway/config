@@ -2,7 +2,7 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
-include catppuccin-macchiato
+include colors
 
 exec --no-startup-id dex -ae sway
 
@@ -16,14 +16,14 @@ set $down e
 set $up i
 set $right o
 
-set $term wezterm
+set $term kitty
 
 set $menu rofi -show drun | xargs swaymsg exec --
 
 ### Output configuration
-exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+output "AOC Q27G1WG4 0x00020A32" mode 2560x1440@143.912Hz
 
-exec swaybg --image ~/Pictures/backgrounds/arch-rainbow-1920x1080.png --mode center --color=#302d41
+output "*" background $wallpaper fill
 
 ### Idle configuration
 
@@ -177,20 +177,20 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 bindsym $mod+b exec zen-browser
 bindsym $mod+x exec xournalpp
-# bindsym $mod+c exec "wezterm start --cwd ~/nextcloud/notebook/tex xch nvim"
-bindsym $mod+c exec "lectern open"
-bindsym $mod+d exec "wezterm start --cwd ~/nextcloud/escritoire xch nvim"
-bindsym $mod+Shift+t exec "wezterm start --class 'float'"
-bindsym $mod+Shift+c exec "wezterm start --class 'numbat' numbat"
-bindsym $mod+Shift+g exec "feh -Z -F -B black /home/josh/Pictures/game.png"
+bindsym $mod+c exec lectern open
+bindsym $mod+d exec kitty --directory ~/nextcloud/escritoire xch nvim
+bindsym $mod+Shift+t exec kitty --app-id 'float'
+bindsym $mod+Shift+c exec kitty --app-id 'numbat' numbat
+bindsym $mod+Shift+g exec feh -Z -F -B black /home/josh/Pictures/game.png
+bindsym $mod+Shift+w exec wallpicker
 
-# target                 title     bg      text   indicator  border
-client.focused           $flamingo $crust  $text  $rosewater $flamingo
-client.focused_inactive  00000000  $base   $text  00000000   00000000
-client.unfocused         00000000  $mantle $text  00000000   00000000
-client.urgent            $peach    $base   $peach $overlay0  $peach
-client.placeholder       $overlay0 $base   $text  $overlay0  $overlay0
-client.background        $base
+# target                 title     bg           text        indicator  border
+client.focused           $color7   $background  $foreground $color15   $color7
+client.focused_inactive  $color0   $color0      $foreground 00000000   00000000
+client.unfocused         $color0   $color0      $foreground 00000000   00000000
+client.urgent            $color13  $background  $color13    $color8    $color13
+client.placeholder       $color8   $background  $foreground $color8    $color8
+client.background        $background
 
 gaps inner 10px
 gaps outer 0px
@@ -199,12 +199,12 @@ title_align center
 default_border pixel
 
 for_window [app_id="float"] floating enable
-for_window [app_id="numbat"] floating enable
+for_window [app_id="numbat"] floating enable; resize set 800 600
 for_window [app_id="xoppdoggin"] floating enable; resize set 1800 1000
+for_window [app_id="wallpicker"] floating enable; resize set 1800 1000
 for_window [class="Inkscape"] floating enable; resize set 1800 1000
 for_window [class="vimscape"] floating enable; resize set 600 300; move down 300; move left 550
 
-assign [class="^Spotify"] workspace number 8
 assign [class="^feishin"] workspace number 8
 assign [class="^discord"] workspace number 9
 assign [class="^Slack"] workspace number 9

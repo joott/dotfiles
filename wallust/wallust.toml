@@ -1,0 +1,40 @@
+color_space = "lch"
+palette = "dark16"
+check_contrast = true
+saturation = 30
+threshold = 10
+
+[templates]
+waybar.template = 'colors_waybar.css'
+waybar.target = '~/.config/waybar/colors.css'
+
+kitty.template = 'colors_kitty.conf'
+kitty.target = '~/.config/kitty/colors.conf'
+
+starship.template = 'starship.toml'
+starship.target = '~/.config/starship/starship.toml'
+
+transient_star.template = 'starship_transient.toml'
+transient_star.target = '~/.config/starship/transient.toml'
+
+sway.template = 'colors_sway'
+sway.target = '~/.config/sway/colors'
+
+neopywal.template = 'colors_neowallust.vim'
+neopywal.target = '~/.local/share/nvim/lazy/neopywal/palettes/wallust.vim'
+
+rofi.template = 'colors_rofi.rasi'
+rofi.target = '~/.config/rofi/colors.rasi'
+
+swaylock.template = 'swaylock'
+swaylock.target = '~/.config/swaylock/config'
+
+dunst.template = 'dunstrc'
+dunst.target = '~/.config/dunst/dunstrc'
+
+zathura.template = 'colors_zathura'
+zathura.target = '~/.config/zathura/colors'
+
+fish.template = 'colors_fish.fish'
+fish.target = '~/.config/fish/colors.fish'
+fish.pywal = true

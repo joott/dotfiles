@@ -1,4 +1,4 @@
-include catppuccin-macchiato
-set recolor true
+include colors
 set font FiraCodeNerdFont
 set selection-clipboard clipboard
+set database sqlite

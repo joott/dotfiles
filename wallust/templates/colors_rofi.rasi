@@ -1,0 +1,10 @@
+* {
+    bg-col:  {{background}};
+    bg-col-light: {{background}};
+    border-col: {{background}};
+    selected-col: {{background}};
+    blue: {{color12}};
+    fg-col: {{foreground}};
+    fg-col2: {{color13}};
+    grey: {{color0}};
+}

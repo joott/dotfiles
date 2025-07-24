@@ -1,0 +1,22 @@
+[global]
+horizontal_padding = 12
+frame_width = 2
+font = FiraCodeNerdFont 11
+icon_theme = Papyrus
+corner_radius = 16
+
+frame_color = "{{color11}}"
+separator_color= frame
+
+[urgency_low]
+background = "{{background}}"
+foreground = "{{foreground}}"
+
+[urgency_normal]
+background = "{{background}}"
+foreground = "{{foreground}}"
+
+[urgency_critical]
+background = "{{color15}}"
+foreground = "{{background}}"
+frame_color = "{{color7}}"
