@@ -2,7 +2,7 @@
 
 * {
     width: 600;
-    font: "Fira Code Nerd Font 14";
+    font: "Lilex Nerd Font 14";
 }
 
 element-text, element-icon , mode-switcher {

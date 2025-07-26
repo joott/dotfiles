@@ -25,5 +25,5 @@ text-wrong-color={{color10}}
 inside-wrong-color={{background}}88
 grace=4
 fade-in=0.2
-font=FiraCodeNerdFont
+font=LilexNerdFont
 font-size=30

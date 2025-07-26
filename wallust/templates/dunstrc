@@ -1,7 +1,7 @@
 [global]
 horizontal_padding = 12
 frame_width = 2
-font = FiraCodeNerdFont 11
+font = LilexNerdFont 11
 icon_theme = Papyrus
 corner_radius = 16
 

@@ -6,7 +6,7 @@ include colors
 
 exec --no-startup-id dex -ae sway
 
-font pango:Fira Sans 10
+font pango:Lilex Nerd Font 10
 
 ### Variables
 set $mod Mod4
@@ -49,8 +49,6 @@ input type:touch {
 input type:tablet_tool {
     map_to_output eDP-1
 }
-
-mouse_warping container
 
 ### Key bindings
 #
@@ -189,12 +187,12 @@ bindsym $mod+Shift+c exec kitty --app-id 'numbat' numbat
 bindsym $mod+Shift+g exec feh -Z -F -B black /home/josh/Pictures/game.png
 bindsym $mod+Shift+w exec wallpicker
 
-# target                 title     bg           text        indicator  border
-client.focused           $color12  $color12     $background $color15   $color12
-client.focused_inactive  $color0   $color0      $foreground $color13   00000000
-client.unfocused         $color0   $color0      $foreground $color13   00000000
-client.urgent            $color13  $background  $color13    $color8    $color13
-client.placeholder       $color8   $background  $foreground $color8    $color8
+# target                 title    bg          text        indicator border
+client.focused           $color12 $color12    $background $color12  $color12
+client.focused_inactive  $color0  $color0     $foreground 00000000  00000000
+client.unfocused         $color0  $color0     $foreground 00000000  00000000
+client.urgent            $color13 $background $color13    00000000  $color13
+client.placeholder       $color8  $background $foreground 00000000  $color8
 client.background        $background
 
 gaps inner 10px
