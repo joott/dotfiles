@@ -10,9 +10,7 @@ map('n', 'J', 'mzJ`z')
 map('', 'o', 'o<Esc>')
 map('', 'O', 'O<Esc>')
 
-map('t', '<C-Space>', '<C-\\><C-n>')
-map('v', '<PageDown>', "<cmd>m '>+1<CR>gv=gv")
-map('v', '<PageUp>', "<cmd>m '<-2<CR>gv=gv")
+map('t', '<C-Space>', [[<C-\><C-n>]])
 
 map('n', '<leader>W', '<cmd>set wrap!<CR>')
 
@@ -46,6 +44,8 @@ map('n', '<leader>vc', '<cmd>VimtexClean!<CR>')
 
 map('n', '<leader>tw', '<cmd>Twilight<CR>')
 
+map('n', '<leader>o', '<cmd>Outline<CR>')
+
 -- buffers
 map('n', '<PageUp>', '<cmd>bnext<CR>')
 map('n', '<PageDown>', '<cmd>bprevious<CR>')
@@ -56,19 +56,19 @@ map('n', '<leader>U', '<cmd>bufdo bd<CR>') --close all
 map('n', '<leader>vs', '<cmd>vsplit<CR><cmd>bnext<CR>') --ver split + open next buffer
 
 -- buffer position nav + reorder
-map('n', '<A-Left>', '<cmd>BufferMovePrevious<CR>')
-map('n', '<A-Right>', '<cmd>BufferMoveNext<CR>')
-map('n', '<A-1>', '<cmd>BufferGoto 1<CR>')
-map('n', '<A-2>', '<cmd>BufferGoto 2<CR>')
-map('n', '<A-3>', '<cmd>BufferGoto 3<CR>')
-map('n', '<A-4>', '<cmd>BufferGoto 4<CR>')
-map('n', '<A-5>', '<cmd>BufferGoto 5<CR>')
-map('n', '<A-6>', '<cmd>BufferGoto 6<CR>')
-map('n', '<A-7>', '<cmd>BufferGoto 7<CR>')
-map('n', '<A-8>', '<cmd>BufferGoto 8<CR>')
-map('n', '<A-9>', '<cmd>BufferGoto 9<CR>')
-map('n', '<A-0>', '<cmd>BufferLast<CR>')
-map('n', '<A-p>', '<cmd>BufferPin<CR>')
+map('n', '<M-Left>', '<cmd>BufferMovePrevious<CR>')
+map('n', '<M-Right>', '<cmd>BufferMoveNext<CR>')
+map('n', '<M-1>', '<cmd>BufferGoto 1<CR>')
+map('n', '<M-2>', '<cmd>BufferGoto 2<CR>')
+map('n', '<M-3>', '<cmd>BufferGoto 3<CR>')
+map('n', '<M-4>', '<cmd>BufferGoto 4<CR>')
+map('n', '<M-5>', '<cmd>BufferGoto 5<CR>')
+map('n', '<M-6>', '<cmd>BufferGoto 6<CR>')
+map('n', '<M-7>', '<cmd>BufferGoto 7<CR>')
+map('n', '<M-8>', '<cmd>BufferGoto 8<CR>')
+map('n', '<M-9>', '<cmd>BufferGoto 9<CR>')
+map('n', '<M-0>', '<cmd>BufferLast<CR>')
+map('n', '<M-p>', '<cmd>BufferPin<CR>')
 
 -- window resizing
 map('n', '<S-Left>', ':vertical resize -2<CR>')

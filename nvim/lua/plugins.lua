@@ -1,13 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -33,6 +33,7 @@ require("lazy").setup({
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
     { 'echasnovski/mini.files', version = '*' },
     { 'echasnovski/mini.trailspace', version = '*' },
+    { 'echasnovski/mini.move', version = '*' },
     { 'numToStr/Comment.nvim', lazy = false, },
     {
         "goolord/alpha-nvim",
@@ -72,15 +73,13 @@ require("lazy").setup({
         'romgrk/barbar.nvim',
         init = function() vim.g.barbar_auto_setup = false end,
         opts = {
-            -- Set the filetypes which barbar will offset itself for
             sidebar_filetypes = {
                 undotree = {
-                  text = 'undotree',
-                  align = 'center', -- *optionally* specify an alignment (either 'left', 'center', or 'right')
+                    text = 'undotree',
+                    align = 'center',
                 },
             },
         },
-        version = '^1.0.0', -- optional: only update when a new 1.x version is released
     },
     {
         'windwp/nvim-autopairs',
@@ -88,12 +87,16 @@ require("lazy").setup({
         config = true
     },
     {
-        "RedsXDD/neopywal.nvim",
+        'RedsXDD/neopywal.nvim',
         name = "neopywal",
         lazy = false,
         priority = 1000,
         opts = {
             use_palette = 'wallust',
         },
-    }
+    },
+    {
+        'hedyhli/outline.nvim',
+        config = function() require("outline").setup() end,
+    },
 })
