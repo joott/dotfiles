@@ -5,4 +5,4 @@ id_color = "{{color14}}"
 
 [character]
 disabled = false
-success_symbol = '[󰑂󰁔](fg:id_color)'
+success_symbol = '[󰁔](fg:id_color)'

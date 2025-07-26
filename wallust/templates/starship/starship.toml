@@ -1,5 +1,5 @@
 format = """
-[┏](id_color)\
+[╭](id_color)\
 [](id_color)\
 $os\
 $username\
@@ -25,7 +25,8 @@ $julia\
 $lua\
 [](fg:lang_color)\
 $line_break\
-[┗](id_color)$character
+[╰](id_color)\
+$character
 """
 
 palette = "wallust"

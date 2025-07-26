@@ -15,10 +15,6 @@ function starship_transient_prompt_func
     starship module character
 end
 
-function fish_greeting
-    set_color $welcome_color; echo 󰑂󱠡; set_color normal
-end
-
 function xcd
     set --local result (command xplr $argv)
     [ -n "$result" ] && cd "$result"

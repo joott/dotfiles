@@ -11,11 +11,8 @@ waybar.target = '~/.config/waybar/colors.css'
 kitty.template = 'colors_kitty.conf'
 kitty.target = '~/.config/kitty/colors.conf'
 
-starship.template = 'starship.toml'
-starship.target = '~/.config/starship/starship.toml'
-
-transient_star.template = 'starship_transient.toml'
-transient_star.target = '~/.config/starship/transient.toml'
+starship.template = 'starship'
+starship.target = '~/.config/starship/'
 
 sway.template = 'colors_sway'
 sway.target = '~/.config/sway/colors'
