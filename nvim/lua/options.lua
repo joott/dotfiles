@@ -14,7 +14,7 @@ local options = {
     smartindent = false,
     autoindent = true,
 
-    wrap = false,
+    wrap = true,
 
     hlsearch = false,
     incsearch = true,

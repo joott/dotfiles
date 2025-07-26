@@ -14,6 +14,8 @@ map('t', '<C-Space>', '<C-\\><C-n>')
 map('v', '<PageDown>', "<cmd>m '>+1<CR>gv=gv")
 map('v', '<PageUp>', "<cmd>m '<-2<CR>gv=gv")
 
+map('n', '<leader>W', '<cmd>set wrap!<CR>')
+
 -- telescope
 map('n', '<leader>pf', builtin.find_files, {})
 map('n', '<leader>pg', function()
