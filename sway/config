@@ -4,6 +4,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 ### Variables
 
+include colors
+
 set $mod Mod4
 
 set $left n
@@ -178,8 +180,6 @@ bindsym $mod+Shift+w exec wallpicker
 bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
 
 ### Appearance
-
-include colors
 
 # target                 title    bg          text        indicator border
 client.focused           $color12 $color12    $background $color12  $color12
