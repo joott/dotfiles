@@ -1,7 +1,7 @@
 color_space = "lch"
 palette = "dark16"
 check_contrast = true
-saturation = 30
+saturation = 35
 threshold = 10
 
 [templates]

@@ -1,8 +1,12 @@
 [general]
 overlay = no
 
+[info]
+show = no
+
 [gallery]
 pstore = yes
 
 [keys.gallery]
 Return = exec echo "%"; exit
+MouseLeft = exec echo "%"; exit
