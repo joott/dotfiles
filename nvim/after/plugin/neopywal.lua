@@ -1,3 +1,19 @@
+-- make a rainbow out of the brighter colors rather than the darker ones
+function my_rainbow()
+    local C = require("neopywal.lib.palette").get()
+    local U = require("neopywal.utils.color")
+
+    return {
+        C.color9,
+        U.blend(C.color9, C.color11, 0.5),
+        C.color11,
+        C.color10,
+        C.color14,
+        C.color12,
+        C.color13,
+    }
+end
+
 -- highlights taken from pywal16.nvim
 function highlights (C)
     return {
@@ -298,6 +314,15 @@ function highlights (C)
         -- TSTitle             = { };    -- Text that is part of a title.
         -- TSLiteral           = { };    -- Literal text.
         -- TSURI               = { };    -- Any URI like a link or email.
+
+        -- (brighter) Rainbow
+        rainbow1 = { fg = my_rainbow()[1] },
+        rainbow2 = { fg = my_rainbow()[2] },
+        rainbow3 = { fg = my_rainbow()[3] },
+        rainbow4 = { fg = my_rainbow()[4] },
+        rainbow5 = { fg = my_rainbow()[5] },
+        rainbow6 = { fg = my_rainbow()[6] },
+
     }
 end
 
