@@ -1,7 +1,7 @@
 [global]
 horizontal_padding = 12
-frame_width = 2
-font = LilexNerdFont 11
+frame_width = 3
+font = LilexNerdFont 16
 icon_theme = Papyrus
 corner_radius = 16
 
@@ -17,6 +17,6 @@ background = "{{background}}"
 foreground = "{{foreground}}"
 
 [urgency_critical]
-background = "{{color15}}"
+background = "{{color11}}"
 foreground = "{{background}}"
-frame_color = "{{color7}}"
+frame_color = "{{color3}}"

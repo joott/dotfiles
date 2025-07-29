@@ -1,10 +1,29 @@
 * {
-    bg-col:  {{background}};
-    bg-col-light: {{background}};
-    border-col: {{background}};
-    selected-col: {{background}};
-    blue: {{color12}};
-    fg-col: {{foreground}};
-    fg-col2: {{color13}};
-    grey: {{color0}};
+    selected-active-foreground:  @background;
+    lightfg:                     {{foreground}};
+    separatorcolor:              @accent;
+    urgent-foreground:           {{color13}};
+    alternate-urgent-background: @lightbg;
+    lightbg:                     {{color0}};
+    background-color:            transparent;
+    border-color:                @accent;
+    normal-background:           @background;
+    selected-urgent-background:  {{color13}};
+    alternate-active-background: @lightbg;
+    spacing:                     2;
+    alternate-normal-foreground: @foreground;
+    urgent-background:           @background;
+    selected-normal-foreground:  @lightbg;
+    active-foreground:           {{color12}};
+    background:                  {{background}};
+    selected-active-background:  {{color12}};
+    active-background:           @background;
+    selected-normal-background:  @lightfg;
+    alternate-normal-background: @lightbg;
+    foreground:                  {{foreground}};
+    selected-urgent-foreground:  @background;
+    normal-foreground:           @foreground;
+    alternate-urgent-foreground: {{color13}};
+    alternate-active-foreground: {{color12}};
+    accent:                      {{color14}};
 }
