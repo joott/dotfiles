@@ -214,10 +214,10 @@ for_window [app_id="ration"] floating enable; resize set 30 ppt 30 ppt
 for_window [class="Inkscape"] floating enable; resize set 90 ppt 90 ppt
 for_window [class="vimscape"] floating enable; resize set 30 ppt 25 ppt; move down 300; move left 550
 
-assign [class="^feishin"] workspace number 8
-assign [class="^discord"] workspace number 9
-assign [class="^Slack"] workspace number 9
-assign [app_id="^thunderbird"] workspace number 9
+assign [class="^discord"] workspace number 8
+assign [class="^Slack"] workspace number 8
+assign [app_id="^thunderbird"] workspace number 8
+assign [class="^feishin"] workspace number 9
 assign [app_id="keepassxc"] workspace number 10
 
 # Launch on startup
@@ -230,5 +230,6 @@ exec dunst
 exec keepassxc
 exec feishin
 exec gammastep
+exec rat reset
 
 include /etc/sway/config.d/*
