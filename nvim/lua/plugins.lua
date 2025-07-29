@@ -91,9 +91,6 @@ require("lazy").setup({
         name = "neopywal",
         lazy = false,
         priority = 1000,
-        opts = {
-            use_palette = 'wallust',
-        },
     },
     {
         'hedyhli/outline.nvim',

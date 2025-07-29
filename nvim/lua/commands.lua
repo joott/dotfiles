@@ -6,9 +6,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         require("feline").setup({
             components = require("neopywal.theme.plugins.feline").get(),
         })
-
-        vim.api.nvim_set_hl(0, '@markup.heading.1.markdown', { link = 'DiffText' })
-        vim.api.nvim_set_hl(0, 'markdownH1', { link = 'DiffText' })
     end,
 })
 
