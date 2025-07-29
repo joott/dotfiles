@@ -309,3 +309,5 @@ require("neopywal").setup({
         }
     end,
 })
+
+vim.cmd.colorscheme("neopywal")
