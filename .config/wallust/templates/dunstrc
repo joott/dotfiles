@@ -1,8 +1,10 @@
 [global]
 horizontal_padding = 12
 frame_width = 3
+separator_height = 3
 font = LilexNerdFont 16
-icon_theme = Papyrus
+icon_theme = Papirus-Dark
+enable_recursive_icon_lookup = true
 corner_radius = 16
 
 frame_color = "{{color11}}"
