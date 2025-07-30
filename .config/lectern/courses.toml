@@ -69,3 +69,15 @@ name = "ma551"
 title = "Introduction to Topology"
 prof = "Dr. Radmila Sazdanovic"
 semester = "f24"
+
+[ma491]
+name = "ma491"
+title = "TQFTs"
+prof = "Dr. Tye Lidman"
+semester = "s25"
+
+[ma555]
+name = "ma555"
+title = "Introduction to Manifold Theory"
+prof = "Dr. Peter McGrath"
+semester = "s25"
