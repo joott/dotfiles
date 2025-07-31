@@ -89,7 +89,7 @@ button {
 }
 
 #window {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

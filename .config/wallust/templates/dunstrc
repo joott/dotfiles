@@ -6,6 +6,7 @@ font = LilexNerdFont 16
 icon_theme = Papirus-Dark
 enable_recursive_icon_lookup = true
 corner_radius = 16
+dmenu = "/usr/local/bin/rofi -dmenu -p dunst"
 
 frame_color = "{{color11}}"
 separator_color= frame
