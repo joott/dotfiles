@@ -1,6 +1,22 @@
 vim.api.nvim_create_autocmd("ColorScheme", {
     pattern = "*",
     callback = function()
+        local has_feline, feline = pcall(require, "feline")
+        if not has_feline then
+            return
+        end
+
+        local has_neopywal, neopywal_feline = pcall(require, "neopywal.theme.plugins.feline")
+        if not has_neopywal then
+            return
+        end
+
+        neopywal_feline.setup()
+
+        feline.setup({
+            components = neopywal_feline.get(),
+        })
+
         package.loaded["feline"] = nil
         package.loaded["neopywal.theme.plugins.feline"] = nil
         require("feline").setup({

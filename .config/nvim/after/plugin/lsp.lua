@@ -35,24 +35,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 require('mason').setup()
-require('mason-lspconfig').setup({
-  ensure_installed = {
-    'julials',
-  }
-})
 
 require("mason-lspconfig").setup {
     function (server_name)
         lspconfig[server_name].setup {}
     end,
-
-    ["julials"] = function ()
-        lspconfig.julials.setup {
-            on_attach = on_attach,
-            julia_env_path = "/home/josh/.julia/environments/v1.10/",
-            filetypes = { "julia", "jl" },
-            single_file_support = true
-        }
-    end
 }
 
+vim.lsp.enable("julials")
