@@ -20,6 +20,7 @@ set $menu rofi -show drun | xargs swaymsg exec --
 ### Output configuration
 
 output "AOC Q27G1WG4 0x00020A32" mode 2560x1440@143.912Hz
+output "BOE 0x0BCA Unknown" scale 1.25
 
 output "*" background $wallpaper fill
 
