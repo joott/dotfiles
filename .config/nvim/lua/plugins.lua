@@ -92,6 +92,13 @@ require("lazy").setup({
     },
     {
         'hedyhli/outline.nvim',
-        config = function() require("outline").setup() end,
+        config = function()
+            require("outline").setup({
+                keymaps = {
+                    fold = '<Left>',
+                    unfold = '<Right>',
+                }
+            })
+        end,
     },
 })
