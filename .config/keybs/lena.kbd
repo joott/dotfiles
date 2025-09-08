@@ -1,0 +1,149 @@
+#| --------------------------------------------------------------------------
+
+(deflayer name
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    _    _    _    _    _          _
+  _    _    _    _    _    _    _    _    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  _    _    _                                                  _    _    _
+)
+
+  -------------------------------------------------------------------------- |#
+
+(defcfg
+  process-unmapped-keys yes
+  linux-dev-names-include (
+    "AT Translated Set 2 keyboard"
+    "TPPS/2 Elan TrackPoint"
+  )
+)
+
+(defalias
+  nav (layer-while-held navigation)
+  num (one-shot-press-pcancel 1500 (layer-while-held numbers))
+  sym (one-shot-press-pcancel 1500 (layer-while-held symbols))
+  fun (one-shot-press-pcancel 1500 (layer-while-held function))
+  qwe (layer-switch qwerty)
+  cdh (layer-switch colemakdh)
+  oss (one-shot-press 500 lsft) ;; one shot shift
+  sfd (tap-dance 200 (@oss caps)) ;; shift dance
+
+  hrt (tap-hold-release 200 200 t lmet)
+  hrn (tap-hold-release 200 200 n lmet)
+  hrs (tap-hold-release 200 200 s lctl)
+  hre (tap-hold-release 200 200 e lctl)
+  hrr (tap-hold-release 200 200 r lalt)
+  hri (tap-hold-release 200 200 i lalt)
+  hra (tap-hold-release 200 200 a @nav)
+
+  meq (tap-hold-release 200 200 = lmet)
+  mco (tap-hold-release 200 200 , lctl)
+
+  pop (tap-hold-release 200 200 S-9 lctl)
+  pcl (tap-hold-release 200 200 S-0 lsft)
+  cop (tap-hold-release 200 200 S-[ lalt)
+
+  mau (movemouse-accel-up 5 1000 1 5)
+  mal (movemouse-accel-left 5 1000 1 5)
+  mad (movemouse-accel-down 5 1000 1 5)
+  mar (movemouse-accel-right 5 1000 1 5)
+
+  mwu (mwheel-up 1 1)
+  mwl (mwheel-left 1 1)
+  mwd (mwheel-down  1 1)
+  mwr (mwheel-right 1 1)
+
+  mou (layer-while-held mouse)
+  mid (tap-hold-press 200 200 mrgt @mou)
+
+  chl (chord midchord a)
+  chr (chord midchord b)
+)
+
+(defchords midchord 50
+  (a  ) mlft
+  (  b) @mid
+  (a b) mmid
+)
+
+(defsrc
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '          ret
+  lsft z    x    c    v    b    n    m    ,    .    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  rctl  pgup up   pgdn
+  mlft mmid mrgt                                               left down rght
+)
+
+(deflayer colemakdh
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    f    p    b    j    l    u    y    @fun [     ]    \
+  esc  @hra @hrr @hrs @hrt g    m    @hrn @hre @hri o    '          ret
+  @sfd x    c    d    v    z    k    h    '    @sym bspc            @sfd
+  wkup lctl lmet lalt           spc            @num sys  @qwe  pgdn up   pgup
+  @chl @chr @num                                               left down rght
+)
+
+(deflayer navigation
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    [    ]    _    _    _    del  pgdn pgup _    _    _     _
+  _    _    @cop @pop @pcl _    _    left down up   rght _          _
+  _    _    _    S-]  _    _    _    home end  _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  _    _    lsft                                               _    _    _
+)
+
+(deflayer numbers
+lrld _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    4    5    6    S-\  _    S-8  S-,  S-.  _    _    _     _
+  _    tab  1    2    3    S-6  _    @meq @mco .    /    _          _
+  _    7    8    9    S-`  _    _    -    S--  S-+  _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  0    _    _                                                  _    _    _
+)
+
+(deflayer symbols
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    S-2  S-3  S-4  S-5  _    _    _    _    _    _    _     _
+  _    `    S-1  S-/  S-;  S-7  _    _    _    _    _    _          _
+  _    \    ;    S-'  S-\  _    _    _    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  0    _    _                                                  _    _    _
+)
+
+(deflayer mouse
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    _    _    _    _    _    @mwl @mwd @mwu @mwr _    _     _
+  _    _    mmid mrgt mlft _    _    @mal @mad @mau @mar _          _
+  _    _    _    _    _    _    _    _    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  _    _    _                                                  _    _    _
+)
+
+(deflayer function
+_    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _     _
+  _    _    f4   f5   f6 prnt mute voldwn volu _    _    _    _     _
+  f12  f11  f1   f2   f3   _    _  brdown brup _    _    _          _
+  _    f7   f8   f9   _    _    _    -    _    _    _               _
+  _    _    _    _              _              _    _    _     _    _    _
+  f10  _    _                                                  _    _    _
+)
+
+(deflayer qwerty
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
+  grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '          ret
+  lsft z    x    c    v    b    n    m    ,    .    /               rsft
+  wkup lctl lmet lalt           spc            ralt sys  @cdh  pgup up   pgdn
+  mlft mmid mrgt                                               left down rght
+)
