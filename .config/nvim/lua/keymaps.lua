@@ -47,8 +47,8 @@ map('n', '<leader>tw', '<cmd>Twilight<CR>')
 map('n', '<leader>o', '<cmd>Outline<CR>')
 
 -- buffers
-map('n', '<PageUp>', '<cmd>bnext<CR>')
-map('n', '<PageDown>', '<cmd>bprevious<CR>')
+map('n', '<PageUp>', '<cmd>BufferNext<CR>')
+map('n', '<PageDown>', '<cmd>BufferPrevious<CR>')
 map('n', '<leader>br', '<cmd>BufferClose<CR>')
 map('n', '<leader>Q', '<cmd>BufferClose!<CR>')
 map('n', '<leader>bn', '<cmd>BufferOrderByBufferNumber<CR>')

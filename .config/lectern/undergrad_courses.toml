@@ -1,0 +1,83 @@
+[ma546]
+name = "ma546"
+title = "Probability and Stochastic Processes"
+prof = "Dr. Erik Bates"
+semester = "f24"
+
+[ma790]
+name = "ma790"
+title = "Lie Groups and Lie Algebras"
+prof = "Dr. Dmitry Zenkov"
+semester = "f24"
+
+[py414]
+name = "py414"
+title = "Electromagnetism I"
+prof = "Dr. Carla Frohlich"
+semester = "f23"
+
+[ma513]
+name = "ma513"
+title = "Complex Analysis"
+prof = "Dr. Andrew Manion"
+semester = "s24"
+
+[ma425]
+name = "ma425"
+title = "Real Analysis I"
+prof = "Dr. Alina Duca"
+semester = "s24"
+
+[py415]
+name = "py415"
+title = "Electromagnetism II"
+prof = "Dr. Carla Fr\"ohlich"
+semester = "s24"
+
+[py411]
+name = "py411"
+title = "Mechanics II"
+prof = "Dr. Gail McLaughlin"
+semester = "f23"
+
+[py402]
+name = "py402"
+title = "Quantum Mechanics II"
+prof = "Dr. Thomas Schaefer"
+semester = "f24"
+
+[afs342]
+name = "afs342"
+title = "Introduction to the African Diaspora"
+prof = "Dr. Moses Khisa"
+semester = "s24"
+
+[py401]
+name = "py401"
+title = "Quantum Mechanics I"
+prof = "Dr. Thomas Schafer"
+semester = "s24"
+
+[ma407]
+name = "ma407"
+title = "Modern Algebra"
+prof = "Dr. Radmila Sazdanovic"
+semester = "f23"
+
+[ma551]
+name = "ma551"
+title = "Introduction to Topology"
+prof = "Dr. Radmila Sazdanovic"
+semester = "f24"
+
+[ma491]
+name = "ma491"
+title = "TQFTs"
+prof = "Dr. Tye Lidman"
+semester = "s25"
+
+[ma555]
+name = "ma555"
+title = "Introduction to Manifold Theory"
+prof = "Dr. Peter McGrath"
+semester = "s25"

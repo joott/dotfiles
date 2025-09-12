@@ -25,10 +25,12 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   num (one-shot-press-pcancel 1500 (layer-while-held numbers))
   sym (one-shot-press-pcancel 1500 (layer-while-held symbols))
   fun (one-shot-press-pcancel 1500 (layer-while-held function))
+  mse (layer-while-held mouse)
   qwe (layer-switch qwerty)
   cdh (layer-switch colemakdh)
   oss (one-shot-press 500 lsft) ;; one shot shift
   sfd (tap-dance 200 (@oss caps)) ;; shift dance
+  bsf (tap-hold-release 200 200 bspc lsft)
 
   hrt (tap-hold-release 200 200 t lmet)
   hrn (tap-hold-release 200 200 n lmet)
@@ -54,7 +56,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   mwd (mwheel-down  1 1)
   mwr (mwheel-right 1 1)
 
-  mou (layer-switch mouse)
+  mst (layer-switch mouse)
 )
 
 (defsrc
@@ -70,8 +72,8 @@ esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  
 (deflayer colemakdh
 esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  home end  ins  del
   grv  1    2    3    4    5    6    7    8    9    0    -     =    bspc
-  tab  q    w    f    p    b    j    l    u    y    @fun [     ]
-  esc  a    @hrr @hrs @hrt g    m    @hrn @hre @hri o    ret   ret  ret
+  esc  q    w    f    p    b    j    l    u    y    @fun [     ]
+  @mse a    @hrr @hrs @hrt g    m    @hrn @hre @hri o    ret   ret  ret
   @sfd x    c    d    v    z    k    h    '    @sym bspc            @sfd
   wkup lctl lmet lalt      @nav spc  @sfd @num ralt sys  @qwe  pgdn up   pgup
                                                                left down rght
@@ -82,7 +84,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   _    _    _    _    _    _    _    _    _    _    _    _     _    _
   _    _    [    ]    _    _    _    del  pgdn pgup _    _     _
   _    esc  @cop @pop @pcl _    _    left down up   rght _     _    _
-  _    ins  del  S-]  _    _    _    home end  @mou _               _
+  _    ins  del  S-]  _    _    _    home end  @mst _               _
   _    _    _    _         _    _    _    ret  _    _    _     _    _    _
                                                                _    _    _
 )
@@ -92,7 +94,7 @@ lrld _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    
   _    _    _    _    _    _    _    _    _    _    _    _     _    _
   _    _    4    5    6    S-\  _    S-8  S-,  S-.  _    _     _
   _    tab  1    2    3    S-6  _    @meq @mco .    /    _     _    _
-  _    7    8    9    S-`  _    _    -    S--  S-+  _               _
+  _    7    8    9    S-`  _    _    -    S--  S-+  @bsf            _
   _    _    _    _         0    _    _    _    _    _    _     _    _    _
                                                                _    _    _
 )

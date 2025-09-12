@@ -455,4 +455,8 @@ return {
         { n.t("\\,") },
         { condition = h.in_mathzone }
     ),
+    n.s({trig="'pt", snippetType="autosnippet", wordTrig = false},
+        { n.t("\\partial") },
+        { condition = h.in_mathzone }
+    ),
 }

@@ -82,7 +82,11 @@ require("lazy").setup({
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
-        config = true
+        config = function()
+            require("nvim-autopairs").setup {
+                disable_filetype = { "tex" },
+            }
+        end
     },
     {
         'RedsXDD/neopywal.nvim',
