@@ -176,6 +176,7 @@ bindsym $mod+b exec zen-browser
 bindsym $mod+x exec xournalpp
 bindsym $mod+c exec lectern open
 bindsym $mod+d exec notepicker $HOME/nextcloud/escritoire/notepad
+bindsym $mod+g exec audiopicker
 bindsym $mod+j exec kitty --app-id 'ration' bash -i ration
 bindsym $mod+Shift+t exec kitty --app-id 'float'
 bindsym $mod+Shift+c exec kitty --app-id 'numbat' numbat
