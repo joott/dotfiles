@@ -184,6 +184,7 @@ bindsym $mod+Shift+g exec feh -Z -F -B black /home/josh/Pictures/game.png
 bindsym $mod+Shift+w exec wallpicker
 
 bindsym Print exec grim -g "$(slurp)" - | wl-copy -t image/png
+bindsym $mod+Print exec grim -g "$(slurp)" $HOME/Pictures/screenshots/$(date +%F_%T | tr ':' '-').png
 
 ### Appearance
 

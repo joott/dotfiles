@@ -9,9 +9,3 @@ name = "PHYS253A"
 title = "Quantum Field Theory I"
 prof = "Matthew Schwartz"
 semester = "f25"
-
-["8.324"]
-name = "8.324"
-title = "Relativistic Quantum Field Theory II"
-prof = "Iain Stewart"
-semester = "f25"
