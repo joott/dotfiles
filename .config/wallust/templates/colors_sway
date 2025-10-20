@@ -1,4 +1,4 @@
-set $wallpaper {{wallpaper}}
+set $wallpaper {{wallpaper | basename}}
 
 set $background {{background}}
 set $foreground {{foreground}}
