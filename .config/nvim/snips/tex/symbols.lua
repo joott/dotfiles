@@ -200,6 +200,18 @@ return {
         { condition = h.in_mathzone }
     ),
 
+    n.s({trig=[[!:|:!]], trigEngine="ecma", snippetType="autosnippet", priority=100},
+        n.fmta("\\mathbf{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9]|\\[a-z]+\{\\?[A-Za-z0-9]+\})(!:|:!)]],
+            wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        n.fmta("\\mathbf{<>}",
+            { n.f(function(_, parent) return parent.captures[1] end) }),
+        { condition = h.in_mathzone }
+    ),
+
     n.s({trig="t(o+)t", regTrig=true, snippetType="autosnippet", priority=100},
         n.fmta("\\<>ot{<>}",
             { n.f(function(_, parent) return string.rep("d", string.len(parent.captures[1])) end),
