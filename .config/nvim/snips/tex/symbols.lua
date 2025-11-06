@@ -226,6 +226,18 @@ return {
         { condition = h.in_mathzone }
     ),
 
+    n.s({trig=[[/\^]], regTrig=true, snippetType="autosnippet", priority=100},
+        n.fmta("\\slashed{<>}",
+            { n.i(1) }),
+        { condition = h.in_mathzone }
+    ),
+    n.s({trig=[[(\\[a-zA-Z]+|[A-Za-z0-9]|\\[a-z]+\{\\?[A-Za-z0-9]+\})/\^]],
+            wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
+        n.fmta("\\slashed{<>}",
+            { n.f(function(_, parent) return parent.captures[1] end) }),
+        { condition = h.in_mathzone }
+    ),
+
     n.s({trig=[[([a-zA-Z])(:#|#:)]], wordTrig=false, trigEngine="ecma", snippetType="autosnippet", priority=200},
         n.fmta("\\mathcal{<>}",
             { n.f(function(_, parent) return string.upper(parent.captures[1]) end) }),
